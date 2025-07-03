@@ -1,36 +1,50 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Briefcase, Smartphone, FileText, GraduationCap } from "lucide-react";
+import { Briefcase, Smartphone, FileText, GraduationCap, BarChart3, Users } from "lucide-react";
 
 export const SolutionsSection = () => {
   const solutions = [
     {
-      title: "Conseil financier stratégique",
-      description: "Experts dédiés pour optimiser votre trésorerie, réduire vos coûts et maximiser vos profits",
-      icon: Briefcase,
-      features: ["Audit financier complet", "Plan de trésorerie personnalisé", "Suivi mensuel avec expert"],
+      title: "Application de gestion & E-boutique",
+      description: "Boostez vos ventes 24h/24 et pilotez votre trésorerie depuis votre smartphone",
+      icon: Smartphone,
+      features: ["Gestion trésorerie temps réel", "E-boutique intégrée", "Alertes automatiques"],
       color: "from-blue-500 to-blue-600"
     },
     {
-      title: "Application tout-en-un",
-      description: "Pilotez votre entreprise depuis votre smartphone avec tous les outils essentiels",
-      icon: Smartphone,
-      features: ["Suivi temps réel", "E-boutique WhatsApp", "Rapports automatisés"],
+      title: "Formation en Gestion Financière",
+      description: "Maîtrisez vos finances grâce à nos programmes de formation approfondis",
+      icon: GraduationCap,
+      features: ["Formation personnalisée", "Suivi post-formation", "Certification ACCESS PME"],
       color: "from-green-500 to-green-600"
     },
     {
-      title: "Libération administrative",
-      description: "Nous gérons votre paperasse pendant que vous développez votre business",
+      title: "Assistance Administrative",
+      description: "Bénéficiez d'un accompagnement sur mesure dans vos démarches administratives",
       icon: FileText,
       features: ["Déclarations automatiques", "Suivi conformité", "Support juridique"],
       color: "from-purple-500 to-purple-600"
     },
     {
-      title: "Formations booste-profits",
-      description: "Montez en compétences avec nos formations pratiques animées par des experts",
-      icon: GraduationCap,
-      features: ["Webinaires exclusifs", "Cas d'études réels", "Certification ACCESS PME"],
+      title: "Gestion Financière",
+      description: "ACCESS PME vous aide à mieux comprendre vos chiffres et à évaluer vos leviers de financement",
+      icon: BarChart3,
+      features: ["Analyse financière", "Leviers de financement", "Optimisation trésorerie"],
       color: "from-orange-500 to-orange-600"
+    },
+    {
+      title: "Accompagnement Humain",
+      description: "Bénéficiez des conseils personnalisés pour accroître votre activité",
+      icon: Users,
+      features: ["Conseiller dédié", "Suivi personnalisé", "Réseau d'entrepreneurs"],
+      color: "from-red-500 to-red-600"
+    },
+    {
+      title: "Diagnostic Personnalisé",
+      description: "Évaluation complète de vos forces et faiblesses (Analyse SWOT)",
+      icon: Briefcase,
+      features: ["Audit complet", "Analyse SWOT", "Plan d'action personnalisé"],
+      color: "from-indigo-500 to-indigo-600"
     }
   ];
 
@@ -40,15 +54,15 @@ export const SolutionsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-access-blue mb-6">
-            Nos Solutions
+            Des Solutions Complètes adaptées à vos besoins
           </h2>
           <p className="text-xl text-gray-600 font-open-sans max-w-3xl mx-auto">
-            Un écosystème complet pour transformer votre gestion financière et booster votre croissance
+            Un écosystème complet pour transformer votre gestion et libérer votre potentiel de croissance
           </p>
         </div>
 
         {/* Solutions Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
             <Card 
               key={index}
@@ -73,7 +87,7 @@ export const SolutionsSection = () => {
                   <ul className="space-y-2">
                     {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                        <div className="w-2 h-2 bg-access-red rounded-full mr-3 flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-access-orange rounded-full mr-3 flex-shrink-0"></div>
                         {feature}
                       </li>
                     ))}
@@ -86,22 +100,30 @@ export const SolutionsSection = () => {
 
         {/* Stats Section */}
         <div className="mt-20 bg-white rounded-2xl shadow-xl p-8">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-montserrat font-bold text-access-blue mb-4">
+              Résultats Concrets
+            </h3>
+            <p className="text-gray-600">
+              Grâce à ACCESS PME, vous n'êtes plus seul(e) : vous avancez avec des conseils concrets
+            </p>
+          </div>
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-montserrat font-bold text-access-red mb-2">500+</div>
-              <div className="text-gray-600">PME accompagnées</div>
+              <div className="text-4xl font-montserrat font-bold text-access-orange mb-2">95%</div>
+              <div className="text-gray-600">Satisfaction & recommandation</div>
             </div>
             <div>
-              <div className="text-4xl font-montserrat font-bold text-access-red mb-2">25%</div>
-              <div className="text-gray-600">Croissance moyenne CA</div>
+              <div className="text-4xl font-montserrat font-bold text-access-green mb-2">87%</div>
+              <div className="text-gray-600">Croissance trésorerie +20%</div>
             </div>
             <div>
-              <div className="text-4xl font-montserrat font-bold text-access-red mb-2">80%</div>
-              <div className="text-gray-600">Réduction impayés</div>
+              <div className="text-4xl font-montserrat font-bold text-access-blue mb-2">60%</div>
+              <div className="text-gray-600">Recrutent des collaborateurs</div>
             </div>
             <div>
-              <div className="text-4xl font-montserrat font-bold text-access-red mb-2">94%</div>
-              <div className="text-gray-600">Satisfaction client</div>
+              <div className="text-4xl font-montserrat font-bold text-access-orange mb-2">2/3</div>
+              <div className="text-gray-600">Gagnent un temps précieux</div>
             </div>
           </div>
         </div>

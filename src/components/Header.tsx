@@ -14,13 +14,13 @@ export const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+        <div className="flex items-center justify-between h-20">
+          {/* Logo - Made larger */}
           <div className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/ef3f9179-5812-473a-a4df-6b57703baac3.png" 
               alt="ACCESS PME Logo" 
-              className="h-10 w-auto"
+              className="h-16 w-auto"
             />
           </div>
 

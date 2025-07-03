@@ -4,7 +4,7 @@ import { Play, Download, ArrowRight } from "lucide-react";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Video/Image Placeholder */}
       <div className="absolute inset-0 z-0">
         <div className="w-full h-full bg-gradient-to-br from-access-blue via-access-green to-access-orange flex items-center justify-center">
@@ -19,13 +19,13 @@ export const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-bold text-white mb-6 leading-tight animate-fade-in text-shadow-lg">
-            Libérez votre entreprise des{" "}
-            <span className="text-yellow-300">complexités financières</span>
+            Propulsez Votre Entreprise avec{" "}
+            <span className="text-yellow-300">ACCESS PME</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-white/90 mb-8 font-open-sans font-light max-w-3xl mx-auto animate-slide-up text-shadow">
-            Conseil expert + Application tout-en-un = Croissance maîtrisée
+            Une équipe de professionnels spécialisés dans l'accompagnement des entrepreneurs
           </p>
 
           {/* CTA Buttons */}
@@ -43,24 +43,36 @@ export const HeroSection = () => {
               className="bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30 px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <Download className="w-5 h-5 mr-2" />
-              Télécharger GRATUITEMENT
+              Application GRATUITE
             </Button>
           </div>
 
-          {/* Trust Logos */}
+          {/* Initiative Badge */}
+          <div className="animate-fade-in mb-8">
+            <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white/90">
+              <span className="text-sm font-medium">Une initiative de</span>
+              <span className="ml-2 font-bold text-lg">Jokkolabs</span>
+            </div>
+          </div>
+
+          {/* Stats */}
           <div className="animate-fade-in">
-            <p className="text-white/70 text-sm font-medium mb-6">
-              Ils nous font confiance
-            </p>
-            <div className="flex justify-center items-center space-x-8 opacity-80">
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-3 text-white font-montserrat font-bold">
-                BDK
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                <div className="text-2xl font-bold text-white">95%</div>
+                <div className="text-white/80 text-sm">Satisfaction</div>
               </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-3 text-white font-montserrat font-bold">
-                COFINA
+              <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                <div className="text-2xl font-bold text-white">87%</div>
+                <div className="text-white/80 text-sm">Croissance tréso.</div>
               </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-3 text-white font-montserrat font-bold">
-                JOKKOLABS
+              <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                <div className="text-2xl font-bold text-white">60%</div>
+                <div className="text-white/80 text-sm">Nouveaux emplois</div>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                <div className="text-2xl font-bold text-white">2/3</div>
+                <div className="text-white/80 text-sm">Gagnent du temps</div>
               </div>
             </div>
           </div>
