@@ -51,29 +51,11 @@ export const HeroSection = () => {
           <div className="animate-fade-in mb-8">
             <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white/90">
               <span className="text-sm font-medium">Une initiative de</span>
-              <span className="ml-2 font-bold text-lg">Jokkolabs</span>
-            </div>
-          </div>
-
-          {/* Stats */}
-          <div className="animate-fade-in">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold text-white">95%</div>
-                <div className="text-white/80 text-sm">Satisfaction</div>
-              </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold text-white">87%</div>
-                <div className="text-white/80 text-sm">Croissance tréso.</div>
-              </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold text-white">60%</div>
-                <div className="text-white/80 text-sm">Nouveaux emplois</div>
-              </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold text-white">2/3</div>
-                <div className="text-white/80 text-sm">Gagnent du temps</div>
-              </div>
+              <img 
+                src="/lovable-uploads/c07f16a2-c3fd-4039-b8aa-00b546c95a4a.png" 
+                alt="Jokkolabs" 
+                className="ml-2 h-8 w-auto"
+              />
             </div>
           </div>
         </div>
