@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Play, Download, ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 
 export const HeroSection = () => {
   return (
@@ -45,18 +45,6 @@ export const HeroSection = () => {
               <Download className="w-5 h-5 mr-2" />
               Application GRATUITE
             </Button>
-          </div>
-
-          {/* Initiative Badge */}
-          <div className="animate-fade-in mb-8">
-            <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white/90">
-              <span className="text-sm font-medium">Une initiative de</span>
-              <img 
-                src="/lovable-uploads/c07f16a2-c3fd-4039-b8aa-00b546c95a4a.png" 
-                alt="Jokkolabs" 
-                className="ml-2 h-8 w-auto"
-              />
-            </div>
           </div>
         </div>
       </div>

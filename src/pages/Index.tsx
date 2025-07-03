@@ -9,6 +9,7 @@ import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { CTASection } from "@/components/CTASection";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { JokkolabsSection } from "@/components/JokkolabsSection";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
+        <JokkolabsSection />
         <PainPointsSection />
         <SolutionsSection />
         <AppShowcaseSection />
