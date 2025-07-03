@@ -9,19 +9,20 @@ export const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-access-red rounded-lg flex items-center justify-center">
-                <span className="text-white font-montserrat font-bold text-lg">A</span>
-              </div>
-              <span className="font-montserrat font-bold text-xl">ACCESS PME</span>
+            <div className="flex items-center space-x-3 mb-6">
+              <img 
+                src="/lovable-uploads/ef3f9179-5812-473a-a4df-6b57703baac3.png" 
+                alt="ACCESS PME Logo" 
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Initiative de Jokkolabs pour libérer les PME africaines des complexités financières.
             </p>
             <div className="flex space-x-4">
-              <Facebook className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Linkedin className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Twitter className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
+              <Facebook className="w-5 h-5 text-gray-400 hover:text-access-blue cursor-pointer transition-colors" />
+              <Linkedin className="w-5 h-5 text-gray-400 hover:text-access-blue cursor-pointer transition-colors" />
+              <Twitter className="w-5 h-5 text-gray-400 hover:text-access-blue cursor-pointer transition-colors" />
             </div>
           </div>
 
@@ -29,10 +30,10 @@ export const Footer = () => {
           <div>
             <h3 className="font-montserrat font-bold text-lg mb-6">Solutions</h3>
             <ul className="space-y-3 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">Conseil financier</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Application mobile</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Gestion administrative</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Formations</a></li>
+              <li><a href="#" className="hover:text-access-orange transition-colors">Conseil financier</a></li>
+              <li><a href="#" className="hover:text-access-orange transition-colors">Application mobile</a></li>
+              <li><a href="#" className="hover:text-access-orange transition-colors">Gestion administrative</a></li>
+              <li><a href="#" className="hover:text-access-orange transition-colors">Formations</a></li>
             </ul>
           </div>
 
@@ -40,10 +41,10 @@ export const Footer = () => {
           <div>
             <h3 className="font-montserrat font-bold text-lg mb-6">Support</h3>
             <ul className="space-y-3 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">Centre d'aide</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Tutoriels</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Webinaires</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+              <li><a href="#" className="hover:text-access-green transition-colors">Centre d'aide</a></li>
+              <li><a href="#" className="hover:text-access-green transition-colors">Tutoriels</a></li>
+              <li><a href="#" className="hover:text-access-green transition-colors">Webinaires</a></li>
+              <li><a href="#" className="hover:text-access-green transition-colors">Contact</a></li>
             </ul>
           </div>
 
@@ -52,15 +53,15 @@ export const Footer = () => {
             <h3 className="font-montserrat font-bold text-lg mb-6">Contact</h3>
             <div className="space-y-4 text-gray-400">
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-access-red" />
+                <Phone className="w-5 h-5 text-access-orange" />
                 <span>+221 33 827 38 21</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-access-red" />
+                <Mail className="w-5 h-5 text-access-orange" />
                 <span>contact@accesspme.com</span>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-access-red mt-1" />
+                <MapPin className="w-5 h-5 text-access-orange mt-1" />
                 <span>Jokkolabs Dakar<br />Plateau, Sénégal</span>
               </div>
             </div>
@@ -75,9 +76,9 @@ export const Footer = () => {
             <p>&copy; 2024 ACCESS PME. Tous droits réservés.</p>
           </div>
           <div className="flex space-x-6">
-            <a href="#" className="hover:text-white transition-colors">Mentions légales</a>
-            <a href="#" className="hover:text-white transition-colors">Confidentialité</a>
-            <a href="#" className="hover:text-white transition-colors">CGU</a>
+            <a href="#" className="hover:text-access-blue transition-colors">Mentions légales</a>
+            <a href="#" className="hover:text-access-green transition-colors">Confidentialité</a>
+            <a href="#" className="hover:text-access-orange transition-colors">CGU</a>
           </div>
         </div>
       </div>

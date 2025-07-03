@@ -10,7 +10,7 @@ export const PainPointsSection = () => {
       description: "Marges incalculables, stocks anarchiques, impayés invisibles...",
       question: "Et si votre boutique tournait sans vous épuiser ?",
       icon: Package,
-      color: "bg-orange-500"
+      color: "bg-access-orange"
     },
     {
       title: "Startup",
@@ -18,7 +18,7 @@ export const PainPointsSection = () => {
       description: "Trésorerie imprévisible, reporting chronophage, décisions à l'aveugle...",
       question: "Et si vous pilotiez votre croissance en temps réel ?",
       icon: TrendingDown,
-      color: "bg-purple-500"
+      color: "bg-access-green"
     },
     {
       title: "Entrepreneur",
@@ -26,7 +26,7 @@ export const PainPointsSection = () => {
       description: "Créatif bridé par l'administratif, vision noyée dans les chiffres...",
       question: "Et si la finance boostait votre créativité ?",
       icon: Repeat,
-      color: "bg-blue-500"
+      color: "bg-access-blue"
     }
   ];
 
@@ -72,8 +72,8 @@ export const PainPointsSection = () => {
                 </p>
                 
                 {/* Question */}
-                <div className="bg-access-red/5 rounded-lg p-4 border-l-4 border-access-red">
-                  <p className="text-access-red font-semibold text-sm">
+                <div className="bg-access-orange/5 rounded-lg p-4 border-l-4 border-access-orange">
+                  <p className="text-access-orange font-semibold text-sm">
                     {point.question}
                   </p>
                 </div>
@@ -84,7 +84,7 @@ export const PainPointsSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-access-blue to-access-red text-white rounded-2xl p-8 max-w-2xl mx-auto">
+          <div className="bg-gradient-to-r from-access-blue via-access-green to-access-orange text-white rounded-2xl p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-montserrat font-bold mb-4">
               Quel que soit votre profil...
             </h3>

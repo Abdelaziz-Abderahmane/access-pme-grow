@@ -20,10 +20,11 @@ export default {
 		},
 		extend: {
 			colors: {
-				// ACCESS PME Brand Colors
-				'access-red': '#C00000',
-				'access-blue': '#0D5C75',
-				'access-beige': '#F5F5DC',
+				// ACCESS PME Brand Colors from logo
+				'access-orange': '#E59434',
+				'access-green': '#21A366',
+				'access-blue': '#436FB5',
+				'access-beige': '#F0EBD8',
 				
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
