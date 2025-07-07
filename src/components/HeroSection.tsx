@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export const HeroSection = () => {
   return (
@@ -28,7 +28,7 @@ export const HeroSection = () => {
             Une équipe de professionnels spécialisés dans l'accompagnement des entrepreneurs
           </p>
 
-          {/* CTA Buttons */}
+          {/* CTA Button */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-slide-up">
             <Button 
               size="lg" 
@@ -36,14 +36,6 @@ export const HeroSection = () => {
             >
               Découvrir nos solutions
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30 px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-            >
-              <Download className="w-5 h-5 mr-2" />
-              Application GRATUITE
             </Button>
           </div>
         </div>

@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Download } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { useState } from "react";
 
 export const Header = () => {
@@ -27,22 +27,28 @@ export const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <button 
+              onClick={() => scrollToSection('about')}
+              className="text-gray-700 hover:text-access-blue transition-colors font-medium"
+            >
+              Qui sommes-nous
+            </button>
+            <button 
               onClick={() => scrollToSection('solutions')}
               className="text-gray-700 hover:text-access-blue transition-colors font-medium"
             >
-              Solutions
+              Nos services
             </button>
             <button 
               onClick={() => scrollToSection('app')}
               className="text-gray-700 hover:text-access-blue transition-colors font-medium"
             >
-              Application
+              Notre Application
             </button>
             <button 
               onClick={() => scrollToSection('pricing')}
               className="text-gray-700 hover:text-access-blue transition-colors font-medium"
             >
-              Tarifs
+              Nos offres
             </button>
             <button 
               onClick={() => scrollToSection('testimonials')}
@@ -57,10 +63,6 @@ export const Header = () => {
             <Button variant="outline" size="sm" className="text-access-blue border-access-blue hover:bg-access-blue/10">
               <Phone className="w-4 h-4 mr-2" />
               Contact
-            </Button>
-            <Button className="bg-access-orange hover:bg-access-orange/90 text-white">
-              <Download className="w-4 h-4 mr-2" />
-              Télécharger
             </Button>
           </div>
 
@@ -78,22 +80,28 @@ export const Header = () => {
           <div className="md:hidden bg-white border-t border-gray-200 py-4">
             <div className="flex flex-col space-y-4">
               <button 
+                onClick={() => scrollToSection('about')}
+                className="text-left text-gray-700 hover:text-access-blue transition-colors font-medium px-4 py-2"
+              >
+                Qui sommes-nous
+              </button>
+              <button 
                 onClick={() => scrollToSection('solutions')}
                 className="text-left text-gray-700 hover:text-access-blue transition-colors font-medium px-4 py-2"
               >
-                Solutions
+                Nos services
               </button>
               <button 
                 onClick={() => scrollToSection('app')}
                 className="text-left text-gray-700 hover:text-access-blue transition-colors font-medium px-4 py-2"
               >
-                Application
+                Notre Application
               </button>
               <button 
                 onClick={() => scrollToSection('pricing')}
                 className="text-left text-gray-700 hover:text-access-blue transition-colors font-medium px-4 py-2"
               >
-                Tarifs
+                Nos offres
               </button>
               <button 
                 onClick={() => scrollToSection('testimonials')}
@@ -105,10 +113,6 @@ export const Header = () => {
                 <Button variant="outline" size="sm" className="text-access-blue border-access-blue hover:bg-access-blue/10">
                   <Phone className="w-4 h-4 mr-2" />
                   Contact
-                </Button>
-                <Button className="bg-access-orange hover:bg-access-orange/90 text-white">
-                  <Download className="w-4 h-4 mr-2" />
-                  Télécharger
                 </Button>
               </div>
             </div>

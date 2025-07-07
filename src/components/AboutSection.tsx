@@ -1,7 +1,7 @@
 
 export const AboutSection = () => {
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section id="about" className="py-20 bg-white relative overflow-hidden">
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-access-orange/10 rounded-full blur-sm animate-float"></div>
       <div className="absolute bottom-20 right-10 w-16 h-16 bg-access-green/10 rounded-full blur-sm animate-float" style={{animationDelay: '1s'}}></div>
@@ -19,7 +19,7 @@ export const AboutSection = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             {/* Contenu principal */}
             <div className="animate-slide-up">
               <h3 className="text-2xl font-montserrat font-bold text-access-blue mb-6">
@@ -33,29 +33,37 @@ export const AboutSection = () => {
               </p>
             </div>
 
-            {/* Section Jokkolabs intégrée */}
+            {/* Image des conseillers */}
             <div className="animate-slide-up">
-              <div className="bg-gradient-to-br from-access-blue/5 via-access-green/5 to-access-orange/5 rounded-3xl p-8 text-center border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
-                <h4 className="text-xl font-montserrat font-bold text-access-blue mb-6">
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" 
+                  alt="Conseillers professionnels en discussion avec des clients" 
+                  className="rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-access-blue/20 to-transparent rounded-2xl"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* Section Jokkolabs repositionnée */}
+          <div className="text-center animate-fade-in">
+            <div className="bg-gradient-to-r from-access-blue/5 via-access-green/5 to-access-orange/5 rounded-3xl p-8 inline-flex items-center space-x-6 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="text-left">
+                <h4 className="text-lg font-montserrat font-bold text-access-blue mb-2">
                   Une initiative de
                 </h4>
-                
-                {/* Logo Jokkolabs */}
-                <div className="flex justify-center mb-6">
-                  <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/30">
-                    <img 
-                      src="/lovable-uploads/c07f16a2-c3fd-4039-b8aa-00b546c95a4a.png" 
-                      alt="Jokkolabs - Social Change Hub" 
-                      className="h-16 md:h-20 w-auto mx-auto"
-                    />
-                  </div>
-                </div>
-
-                <p className="text-gray-700 font-open-sans leading-relaxed">
-                  ACCESS PME est fier d'être une initiative de 
-                  <span className="font-semibold text-access-blue"> Jokkolabs</span>, 
-                  l'écosystème de référence pour l'innovation sociale et entrepreneuriale en Afrique.
+                <p className="text-gray-600 font-open-sans text-sm">
+                  L'écosystème de référence pour l'innovation<br />
+                  sociale et entrepreneuriale en Afrique
                 </p>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+                <img 
+                  src="/lovable-uploads/c07f16a2-c3fd-4039-b8aa-00b546c95a4a.png" 
+                  alt="Jokkolabs - Social Change Hub" 
+                  className="h-12 w-auto"
+                />
               </div>
             </div>
           </div>
