@@ -3,8 +3,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 export const HeroSection = () => {
+  const scrollToSolutions = () => {
+    document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
       {/* Background Video/Image Placeholder */}
       <div className="absolute inset-0 z-0">
         <div className="w-full h-full bg-gradient-to-br from-access-blue via-access-green to-access-orange flex items-center justify-center">
@@ -33,6 +37,7 @@ export const HeroSection = () => {
             <Button 
               size="lg" 
               className="bg-access-orange hover:bg-access-orange/90 text-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              onClick={scrollToSolutions}
             >
               Découvrir nos solutions
               <ArrowRight className="w-5 h-5 ml-2" />

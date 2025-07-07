@@ -4,34 +4,36 @@ import { Phone, Mail, MapPin, Facebook, Linkedin, Twitter } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white">
+    <footer id="contact" className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 lg:px-8 py-16">
         <div className="grid md:grid-cols-4 gap-8">
-          {/* Company Info */}
+          {/* Company Info with larger logo */}
           <div className="col-span-1">
             <div className="flex items-center space-x-3 mb-8">
               <img 
                 src="/lovable-uploads/ef3f9179-5812-473a-a4df-6b57703baac3.png" 
                 alt="ACCESS PME Logo" 
-                className="h-20 w-auto"
+                className="h-24 w-auto"
               />
             </div>
             <p className="text-gray-300 mb-8 leading-relaxed">
               Une équipe de professionnels spécialisés dans l'accompagnement des entrepreneurs.
             </p>
             
-            {/* Jokkolabs section */}
-            <div className="bg-gray-700 rounded-lg p-4 mb-6">
+            {/* Jokkolabs section with larger logo */}
+            <div className="bg-gray-800 rounded-lg p-6 mb-6">
               <div className="flex items-center space-x-4">
                 <div>
                   <p className="text-sm text-gray-300 mb-1">Une initiative de</p>
                   <p className="text-xs text-gray-400">Social Change Hub</p>
                 </div>
-                <img 
-                  src="/lovable-uploads/c07f16a2-c3fd-4039-b8aa-00b546c95a4a.png" 
-                  alt="Jokkolabs" 
-                  className="h-12 w-auto"
-                />
+                <a href="http://www.jokkolabs.net/" target="_blank" rel="noopener noreferrer">
+                  <img 
+                    src="/lovable-uploads/c07f16a2-c3fd-4039-b8aa-00b546c95a4a.png" 
+                    alt="Jokkolabs" 
+                    className="h-16 w-auto hover:scale-105 transition-transform duration-300"
+                  />
+                </a>
               </div>
             </div>
             
@@ -47,20 +49,20 @@ export const Footer = () => {
             <h3 className="font-montserrat font-bold text-lg mb-6 text-access-orange">Nos Services</h3>
             <ul className="space-y-3 text-gray-300">
               <li><a href="#" className="hover:text-access-orange transition-colors">Gestion Financière</a></li>
-              <li><a href="#" className="hover:text-access-orange transition-colors">Application mobile</a></li>
               <li><a href="#" className="hover:text-access-orange transition-colors">Assistance Administrative</a></li>
+              <li><a href="#" className="hover:text-access-orange transition-colors">Conseil Stratégique</a></li>
               <li><a href="#" className="hover:text-access-orange transition-colors">Formation</a></li>
             </ul>
           </div>
 
-          {/* Application */}
+          {/* Support */}
           <div>
-            <h3 className="font-montserrat font-bold text-lg mb-6 text-access-green">Application</h3>
+            <h3 className="font-montserrat font-bold text-lg mb-6 text-access-green">Support</h3>
             <ul className="space-y-3 text-gray-300">
-              <li><a href="#" className="hover:text-access-green transition-colors">Suivi Trésorerie</a></li>
-              <li><a href="#" className="hover:text-access-green transition-colors">E-boutique WhatsApp</a></li>
-              <li><a href="#" className="hover:text-access-green transition-colors">Gestion Clients</a></li>
-              <li><a href="#" className="hover:text-access-green transition-colors">Rapports IA</a></li>
+              <li><a href="#" className="hover:text-access-green transition-colors">Centre d'aide</a></li>
+              <li><a href="#" className="hover:text-access-green transition-colors">FAQ</a></li>
+              <li><a href="#" className="hover:text-access-green transition-colors">Tutoriels</a></li>
+              <li><a href="#" className="hover:text-access-green transition-colors">Support technique</a></li>
             </ul>
           </div>
 

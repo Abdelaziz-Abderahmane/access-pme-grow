@@ -11,56 +11,65 @@ export const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const scrollToSolutions = () => {
+    document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' });
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo - Made larger */}
+        <div className="flex items-center justify-between h-24">
+          {/* Logo - Made even larger */}
           <div className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/ef3f9179-5812-473a-a4df-6b57703baac3.png" 
               alt="ACCESS PME Logo" 
-              className="h-16 w-auto"
+              className="h-20 w-auto"
             />
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="text-gray-700 hover:text-access-blue transition-colors font-medium"
+          {/* Desktop Navigation - Moved to left with Contact button */}
+          <div className="hidden md:flex items-center space-x-8 flex-1 ml-12">
+            <nav className="flex items-center space-x-8">
+              <button 
+                onClick={() => scrollToSection('about')}
+                className="text-gray-700 hover:text-access-blue transition-colors font-medium"
+              >
+                À propos
+              </button>
+              <button 
+                onClick={() => scrollToSection('solutions')}
+                className="text-gray-700 hover:text-access-blue transition-colors font-medium"
+              >
+                Nos services
+              </button>
+              <button 
+                onClick={() => scrollToSection('app')}
+                className="text-gray-700 hover:text-access-blue transition-colors font-medium"
+              >
+                Notre Application
+              </button>
+              <button 
+                onClick={() => scrollToSection('pricing')}
+                className="text-gray-700 hover:text-access-blue transition-colors font-medium"
+              >
+                Nos offres
+              </button>
+              <button 
+                onClick={() => scrollToSection('testimonials')}
+                className="text-gray-700 hover:text-access-blue transition-colors font-medium"
+              >
+                Témoignages
+              </button>
+            </nav>
+            
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="text-access-blue border-access-blue hover:bg-access-blue/10"
+              onClick={() => scrollToSection('contact')}
             >
-              Qui sommes-nous
-            </button>
-            <button 
-              onClick={() => scrollToSection('solutions')}
-              className="text-gray-700 hover:text-access-blue transition-colors font-medium"
-            >
-              Nos services
-            </button>
-            <button 
-              onClick={() => scrollToSection('app')}
-              className="text-gray-700 hover:text-access-blue transition-colors font-medium"
-            >
-              Notre Application
-            </button>
-            <button 
-              onClick={() => scrollToSection('pricing')}
-              className="text-gray-700 hover:text-access-blue transition-colors font-medium"
-            >
-              Nos offres
-            </button>
-            <button 
-              onClick={() => scrollToSection('testimonials')}
-              className="text-gray-700 hover:text-access-blue transition-colors font-medium"
-            >
-              Témoignages
-            </button>
-          </nav>
-
-          {/* Desktop CTA */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm" className="text-access-blue border-access-blue hover:bg-access-blue/10">
               <Phone className="w-4 h-4 mr-2" />
               Contact
             </Button>
@@ -83,7 +92,7 @@ export const Header = () => {
                 onClick={() => scrollToSection('about')}
                 className="text-left text-gray-700 hover:text-access-blue transition-colors font-medium px-4 py-2"
               >
-                Qui sommes-nous
+                À propos
               </button>
               <button 
                 onClick={() => scrollToSection('solutions')}
@@ -110,7 +119,12 @@ export const Header = () => {
                 Témoignages
               </button>
               <div className="flex flex-col space-y-2 px-4 pt-4 border-t border-gray-200">
-                <Button variant="outline" size="sm" className="text-access-blue border-access-blue hover:bg-access-blue/10">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="text-access-blue border-access-blue hover:bg-access-blue/10"
+                  onClick={() => scrollToSection('contact')}
+                >
                   <Phone className="w-4 h-4 mr-2" />
                   Contact
                 </Button>
