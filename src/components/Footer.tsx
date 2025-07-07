@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, Facebook, Linkedin, Twitter } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer id="contact" className="bg-gray-900 text-white">
+    <footer id="contact" className="bg-gray-800 text-white">
       <div className="container mx-auto px-4 lg:px-8 py-16">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info with larger logo */}
@@ -13,15 +13,15 @@ export const Footer = () => {
               <img 
                 src="/lovable-uploads/ef3f9179-5812-473a-a4df-6b57703baac3.png" 
                 alt="ACCESS PME Logo" 
-                className="h-24 w-auto"
+                className="h-28 w-auto"
               />
             </div>
             <p className="text-gray-300 mb-8 leading-relaxed">
               Une équipe de professionnels spécialisés dans l'accompagnement des entrepreneurs.
             </p>
             
-            {/* Jokkolabs section with larger logo */}
-            <div className="bg-gray-800 rounded-lg p-6 mb-6">
+            {/* Jokkolabs section with larger logo and new design */}
+            <div className="bg-gray-700 rounded-lg p-6 mb-6">
               <div className="flex items-center space-x-4">
                 <div>
                   <p className="text-sm text-gray-300 mb-1">Une initiative de</p>
@@ -31,16 +31,16 @@ export const Footer = () => {
                   <img 
                     src="/lovable-uploads/c07f16a2-c3fd-4039-b8aa-00b546c95a4a.png" 
                     alt="Jokkolabs" 
-                    className="h-16 w-auto hover:scale-105 transition-transform duration-300"
+                    className="h-20 w-auto hover:scale-105 transition-transform duration-300"
                   />
                 </a>
               </div>
             </div>
             
             <div className="flex space-x-4">
-              <Facebook className="w-5 h-5 text-gray-400 hover:text-access-blue cursor-pointer transition-colors" />
-              <Linkedin className="w-5 h-5 text-gray-400 hover:text-access-blue cursor-pointer transition-colors" />
-              <Twitter className="w-5 h-5 text-gray-400 hover:text-access-blue cursor-pointer transition-colors" />
+              <Facebook className="w-6 h-6 text-gray-400 hover:text-access-blue cursor-pointer transition-colors" />
+              <Linkedin className="w-6 h-6 text-gray-400 hover:text-access-blue cursor-pointer transition-colors" />
+              <Twitter className="w-6 h-6 text-gray-400 hover:text-access-blue cursor-pointer transition-colors" />
             </div>
           </div>
 
@@ -71,15 +71,15 @@ export const Footer = () => {
             <h3 className="font-montserrat font-bold text-lg mb-6 text-access-blue">Contact</h3>
             <div className="space-y-4 text-gray-300">
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-access-orange" />
+                <Phone className="w-6 h-6 text-access-orange" />
                 <span>+221 33 827 38 21</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-access-orange" />
+                <Mail className="w-6 h-6 text-access-orange" />
                 <span>contact@access-pme.net</span>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-access-orange mt-1" />
+                <MapPin className="w-6 h-6 text-access-orange mt-1" />
                 <span>Sacré Cœur 3, Villa N° 9653<br />Dakar, Sénégal</span>
               </div>
             </div>

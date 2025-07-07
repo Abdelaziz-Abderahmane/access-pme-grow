@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 export const HeroSection = () => {
-  const scrollToSolutions = () => {
-    document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToAbout = () => {
+    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -37,9 +37,9 @@ export const HeroSection = () => {
             <Button 
               size="lg" 
               className="bg-access-orange hover:bg-access-orange/90 text-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-              onClick={scrollToSolutions}
+              onClick={scrollToAbout}
             >
-              Découvrir nos solutions
+              En savoir plus
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </div>

@@ -11,32 +11,27 @@ export const Header = () => {
     setIsMenuOpen(false);
   };
 
-  const scrollToSolutions = () => {
-    document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' });
-    setIsMenuOpen(false);
-  };
-
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-24">
-          {/* Logo - Made even larger */}
+          {/* Logo */}
           <div className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/ef3f9179-5812-473a-a4df-6b57703baac3.png" 
               alt="ACCESS PME Logo" 
-              className="h-20 w-auto"
+              className="h-24 w-auto"
             />
           </div>
 
-          {/* Desktop Navigation - Moved to left with Contact button */}
-          <div className="hidden md:flex items-center space-x-8 flex-1 ml-12">
-            <nav className="flex items-center space-x-8">
+          {/* Desktop Navigation - All to the left */}
+          <div className="hidden md:flex items-center space-x-6 flex-1 ml-8">
+            <nav className="flex items-center space-x-6">
               <button 
                 onClick={() => scrollToSection('about')}
                 className="text-gray-700 hover:text-access-blue transition-colors font-medium"
               >
-                À propos
+                Qui sommes-nous
               </button>
               <button 
                 onClick={() => scrollToSection('solutions')}
@@ -62,17 +57,17 @@ export const Header = () => {
               >
                 Témoignages
               </button>
+              
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="text-access-blue border-access-blue hover:bg-access-blue/10"
+                onClick={() => scrollToSection('contact')}
+              >
+                <Phone className="w-4 h-4 mr-2" />
+                Contact
+              </Button>
             </nav>
-            
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="text-access-blue border-access-blue hover:bg-access-blue/10"
-              onClick={() => scrollToSection('contact')}
-            >
-              <Phone className="w-4 h-4 mr-2" />
-              Contact
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -92,7 +87,7 @@ export const Header = () => {
                 onClick={() => scrollToSection('about')}
                 className="text-left text-gray-700 hover:text-access-blue transition-colors font-medium px-4 py-2"
               >
-                À propos
+                Qui sommes-nous
               </button>
               <button 
                 onClick={() => scrollToSection('solutions')}
