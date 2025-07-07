@@ -20,18 +20,18 @@ export const Header = () => {
             <img 
               src="/lovable-uploads/ef3f9179-5812-473a-a4df-6b57703baac3.png" 
               alt="ACCESS PME Logo" 
-              className="h-24 w-auto"
+              className="h-32 w-auto"
             />
           </div>
 
-          {/* Desktop Navigation - All to the left */}
-          <div className="hidden md:flex items-center space-x-6 flex-1 ml-8">
+          {/* Desktop Navigation - Positioned to the right */}
+          <div className="hidden md:flex items-center space-x-6">
             <nav className="flex items-center space-x-6">
               <button 
                 onClick={() => scrollToSection('about')}
                 className="text-gray-700 hover:text-access-blue transition-colors font-medium"
               >
-                Qui sommes-nous
+                À propos
               </button>
               <button 
                 onClick={() => scrollToSection('solutions')}
@@ -87,7 +87,7 @@ export const Header = () => {
                 onClick={() => scrollToSection('about')}
                 className="text-left text-gray-700 hover:text-access-blue transition-colors font-medium px-4 py-2"
               >
-                Qui sommes-nous
+                À propos
               </button>
               <button 
                 onClick={() => scrollToSection('solutions')}

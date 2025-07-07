@@ -59,15 +59,15 @@ export const AppShowcaseSection = () => {
               Tout ce dont vous avez besoin pour gérer votre entreprise, dans votre poche
             </p>
 
-            {/* Features Grid - Reduced list */}
+            {/* Features Grid avec icônes colorées et animations */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-4 p-6 rounded-lg hover:bg-gray-50 transition-colors group border border-gray-100">
-                  <div className={`w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
-                    <feature.icon className={`w-5 h-5 ${feature.color}`} />
+                <div key={index} className="flex items-start space-x-4 p-6 rounded-lg hover:bg-gray-50 transition-all duration-300 group border border-gray-100 hover:shadow-lg hover:-translate-y-1">
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br from-white to-gray-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0 shadow-md`}>
+                    <feature.icon className={`w-6 h-6 ${feature.color}`} />
                   </div>
                   <div>
-                    <h3 className="text-base font-montserrat font-bold text-gray-900 mb-2">
+                    <h3 className="text-lg font-montserrat font-bold text-gray-900 mb-2">
                       {feature.title}
                     </h3>
                     <p className="text-sm text-gray-600 leading-relaxed">
@@ -80,7 +80,7 @@ export const AppShowcaseSection = () => {
 
             {/* Testimonials */}
             <div className="space-y-4 mb-8">
-              <Card className="bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-green-500 p-4">
+              <Card className="bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-green-500 p-4 hover:shadow-lg transition-shadow duration-300">
                 <blockquote className="text-sm italic text-gray-700 mb-3">
                   "Le suivi de trésorerie m'a permis d'éviter plusieurs ruptures de stock et d'optimiser mes achats. Un outil indispensable !"
                 </blockquote>
@@ -95,7 +95,7 @@ export const AppShowcaseSection = () => {
                 </div>
               </Card>
 
-              <Card className="bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-blue-500 p-4">
+              <Card className="bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-blue-500 p-4 hover:shadow-lg transition-shadow duration-300">
                 <blockquote className="text-sm italic text-gray-700 mb-3">
                   "Ma boutique en ligne via WhatsApp m'a permis de doubler mes ventes en 3 mois. Mes clients adorent commander directement !"
                 </blockquote>
@@ -125,7 +125,7 @@ export const AppShowcaseSection = () => {
                 >
                   <Button 
                     size="lg" 
-                    className="bg-black hover:bg-gray-800 text-white px-6 py-3 text-base font-semibold w-full"
+                    className="bg-black hover:bg-gray-800 text-white px-6 py-3 text-base font-semibold w-full hover:scale-105 transition-transform duration-300"
                   >
                     <Download className="w-4 h-4 mr-2" />
                     App Store
@@ -139,7 +139,7 @@ export const AppShowcaseSection = () => {
                 >
                   <Button 
                     size="lg" 
-                    className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 text-base font-semibold w-full"
+                    className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 text-base font-semibold w-full hover:scale-105 transition-transform duration-300"
                   >
                     <Download className="w-4 h-4 mr-2" />
                     Google Play
