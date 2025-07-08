@@ -13,7 +13,7 @@ export const Footer = () => {
               <img 
                 src="/lovable-uploads/8fccf90b-64c9-453f-b897-79f5321a72ec.png" 
                 alt="ACCESS PME Logo" 
-                className="h-24 w-auto"
+                className="h-20 w-auto"
               />
             </div>
             <p className="text-gray-300 mb-8 leading-relaxed text-center">
@@ -30,7 +30,7 @@ export const Footer = () => {
                   <img 
                     src="/lovable-uploads/cc944b22-79fa-49a7-8008-d5af30d17883.png" 
                     alt="Jokkolabs" 
-                    className="h-16 w-auto hover:scale-105 transition-transform duration-300"
+                    className="h-12 w-auto hover:scale-105 transition-transform duration-300"
                   />
                 </a>
               </div>
@@ -98,7 +98,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
           <div className="mb-4 md:mb-0">
-            <p>&copy; 2025 ACCESS PME. Tous droits réservés.</p>
+            <p>&copy; 2025 ACCESS PME.</p>
           </div>
           <div className="flex space-x-6">
             <a href="#" className="hover:text-access-blue transition-colors">Mentions légales</a>
