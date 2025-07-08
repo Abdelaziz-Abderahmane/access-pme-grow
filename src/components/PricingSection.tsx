@@ -157,16 +157,6 @@ export const PricingSection = () => {
             </Card>
           ))}
         </div>
-
-        {/* Bottom Note */}
-        <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">
-            Tous les plans incluent une garantie satisfait ou remboursé de 30 jours
-          </p>
-          <Button variant="link" className="text-access-blue hover:text-access-orange font-semibold">
-            Comparer tous les plans en détail →
-          </Button>
-        </div>
       </div>
     </section>
   );
