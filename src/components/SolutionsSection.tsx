@@ -5,32 +5,25 @@ import { Briefcase, Smartphone, FileText, GraduationCap, BarChart3, Users } from
 export const SolutionsSection = () => {
   const solutions = [
     {
-      title: "Application de gestion & E-boutique",
-      description: "Boostez vos ventes 24h/24 et pilotez votre trésorerie depuis votre smartphone",
-      icon: Smartphone,
-      features: ["Gestion trésorerie temps réel", "E-boutique intégrée", "Alertes automatiques"],
-      color: "from-blue-500 to-blue-600"
+      title: "Diagnostic Personnalisé",
+      description: "Évaluation complète de votre activité avec plan d'action personnalisé",
+      icon: Briefcase,
+      features: ["Audit complet", "Évaluation détaillée", "Plan d'action personnalisé"],
+      color: "from-indigo-500 to-indigo-600"
     },
     {
-      title: "Formation en Gestion Financière",
-      description: "Maîtrisez vos finances grâce à nos programmes de formation approfondis",
-      icon: GraduationCap,
-      features: ["Formation personnalisée", "Suivi post-formation", "Certification ACCESS PME"],
-      color: "from-green-500 to-green-600"
+      title: "Assistance à la Gestion Financière",
+      description: "ACCESS PME vous aide à mieux comprendre vos chiffres et à évaluer vos leviers de financement",
+      icon: BarChart3,
+      features: ["Analyse financière", "Leviers de financement", "Optimisation trésorerie"],
+      color: "from-orange-500 to-orange-600"
     },
     {
       title: "Assistance Administrative",
       description: "Bénéficiez d'un accompagnement sur mesure dans vos démarches administratives",
       icon: FileText,
-      features: ["Déclarations automatiques", "Suivi conformité", "Support juridique"],
+      features: ["Déclarations automatiques", "Suivi conformité", "Accompagnement personnalisé"],
       color: "from-purple-500 to-purple-600"
-    },
-    {
-      title: "Gestion Financière",
-      description: "ACCESS PME vous aide à mieux comprendre vos chiffres et à évaluer vos leviers de financement",
-      icon: BarChart3,
-      features: ["Analyse financière", "Leviers de financement", "Optimisation trésorerie"],
-      color: "from-orange-500 to-orange-600"
     },
     {
       title: "Accompagnement Humain",
@@ -40,11 +33,18 @@ export const SolutionsSection = () => {
       color: "from-red-500 to-red-600"
     },
     {
-      title: "Diagnostic Personnalisé",
-      description: "Évaluation complète de vos forces et faiblesses (Analyse SWOT)",
-      icon: Briefcase,
-      features: ["Audit complet", "Analyse SWOT", "Plan d'action personnalisé"],
-      color: "from-indigo-500 to-indigo-600"
+      title: "Formation à la Gestion Financière",
+      description: "Maîtrisez vos finances grâce à nos programmes de formation approfondis",
+      icon: GraduationCap,
+      features: ["Formation personnalisée", "Suivi post-formation", "Certification ACCESS PME"],
+      color: "from-green-500 to-green-600"
+    },
+    {
+      title: "Application de Gestion de Trésorerie & Boutique en ligne",
+      description: "Boostez vos ventes 24h/24 et pilotez votre trésorerie depuis votre smartphone",
+      icon: Smartphone,
+      features: ["Gestion trésorerie temps réel", "Boutique en ligne intégrée", "Alertes automatiques"],
+      color: "from-blue-500 to-blue-600"
     }
   ];
 

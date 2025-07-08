@@ -29,45 +29,49 @@ export const AboutSection = () => {
                 Nous vous accompagnons dans la structuration de votre activité, la gestion optimisée de vos finances et de votre trésorerie, ainsi que dans vos démarches administratives.
               </p>
               <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                En complément, vous bénéficiez d'une application mobile innovante, vous permettant de suivre votre trésorerie en temps réel, où que vous soyez.
+                En complément, vous bénéficiez d'un outil numérique innovant et d'une boutique en ligne, vous permettant de suivre votre trésorerie et boostez vos ventes en temps réel.
               </p>
             </div>
 
-            {/* Image des entrepreneurs africains */}
+            {/* Image des conseillers africains */}
             <div className="animate-slide-up">
-              <div className="relative">
+              <div className="relative group">
                 <img 
-                  src="https://images.unsplash.com/photo-1664575602554-2087b04935a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" 
-                  alt="Entrepreneurs africains dans un bureau moderne" 
-                  className="rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
+                  src="/lovable-uploads/53692a86-e6a6-4fef-9530-8ed4a7de37b8.png"
+                  alt="Conseillers ACCESS PME en réunion" 
+                  className="rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-access-blue/20 to-transparent rounded-2xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-access-blue/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                {/* Animation floating elements around image */}
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-access-orange rounded-full animate-bounce opacity-70"></div>
+                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-access-green rounded-full animate-pulse opacity-70"></div>
               </div>
             </div>
           </div>
 
           {/* Section Jokkolabs avec design ajusté */}
           <div className="text-center animate-fade-in">
-            <div className="relative bg-gradient-to-r from-access-blue/5 via-access-green/5 to-access-orange/5 rounded-2xl p-6 overflow-hidden">
+            <div className="relative bg-gradient-to-r from-access-blue/5 via-access-green/5 to-access-orange/5 rounded-2xl p-4 overflow-hidden">
               <div className="relative z-10 max-w-4xl mx-auto">
                 <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
                   <div className="text-center md:text-left">
-                    <h4 className="text-xl font-montserrat font-bold text-access-blue mb-2">
+                    <h4 className="text-lg font-montserrat font-bold text-access-blue mb-2">
                       Une initiative de
                     </h4>
-                    <p className="text-gray-600 font-open-sans text-base">
+                    <p className="text-gray-600 font-open-sans text-sm">
                       L'écosystème de référence pour l'innovation<br />
                       sociale et entrepreneuriale en Afrique
                     </p>
                   </div>
                   
                   <div className="relative">
-                    <div className="bg-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                       <a href="http://www.jokkolabs.net/" target="_blank" rel="noopener noreferrer">
                         <img 
                           src="/lovable-uploads/c07f16a2-c3fd-4039-b8aa-00b546c95a4a.png" 
                           alt="Jokkolabs - Social Change Hub" 
-                          className="h-16 w-auto hover:scale-110 transition-transform duration-300"
+                          className="h-20 w-auto hover:scale-110 transition-transform duration-300"
                         />
                       </a>
                     </div>

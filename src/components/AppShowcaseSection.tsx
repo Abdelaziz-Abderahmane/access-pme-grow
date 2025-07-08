@@ -34,7 +34,17 @@ export const AppShowcaseSection = () => {
   return (
     <section id="app" className="py-20 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        {/* Centered Title Section */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-access-blue mb-6">
+            L'Application <span className="text-access-orange">ACCESS PME</span>
+          </h2>
+          <p className="text-xl text-gray-600 font-open-sans max-w-3xl mx-auto">
+            Tout ce dont vous avez besoin pour gérer votre entreprise, dans votre poche
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Side - App Image */}
           <div className="relative">
             <div className="relative z-10">
@@ -52,13 +62,6 @@ export const AppShowcaseSection = () => {
 
           {/* Right Side - Features */}
           <div>
-            <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-access-blue mb-6">
-              L'Application <span className="text-access-orange">ACCESS PME</span>
-            </h2>
-            <p className="text-xl text-gray-600 mb-10 font-open-sans">
-              Tout ce dont vous avez besoin pour gérer votre entreprise, dans votre poche
-            </p>
-
             {/* Features Grid avec icônes colorées et animations */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
               {features.map((feature, index) => (
@@ -77,75 +80,79 @@ export const AppShowcaseSection = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
 
-            {/* Testimonials */}
-            <div className="space-y-4 mb-8">
-              <Card className="bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-green-500 p-4 hover:shadow-lg transition-shadow duration-300">
-                <blockquote className="text-sm italic text-gray-700 mb-3">
-                  "Le suivi de trésorerie m'a permis d'éviter plusieurs ruptures de stock et d'optimiser mes achats. Un outil indispensable !"
-                </blockquote>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                    A
-                  </div>
-                  <div className="ml-3">
-                    <div className="font-semibold text-gray-900 text-sm">Adama Diallo</div>
-                    <div className="text-xs text-gray-600">Commerçant, Dakar</div>
-                  </div>
+        {/* Centered Testimonials */}
+        <div className="mt-16 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <Card className="bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-green-500 p-4 hover:shadow-lg transition-shadow duration-300">
+              <blockquote className="text-sm italic text-gray-700 mb-3">
+                "Le suivi de trésorerie m'a permis d'éviter plusieurs ruptures de stock et d'optimiser mes achats. Un outil indispensable !"
+              </blockquote>
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                  A
                 </div>
-              </Card>
-
-              <Card className="bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-blue-500 p-4 hover:shadow-lg transition-shadow duration-300">
-                <blockquote className="text-sm italic text-gray-700 mb-3">
-                  "Ma boutique en ligne via WhatsApp m'a permis de doubler mes ventes en 3 mois. Mes clients adorent commander directement !"
-                </blockquote>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                    F
-                  </div>
-                  <div className="ml-3">
-                    <div className="font-semibold text-gray-900 text-sm">Fatou Sall</div>
-                    <div className="text-xs text-gray-600">Entrepreneur, Thiès</div>
-                  </div>
+                <div className="ml-3">
+                  <div className="font-semibold text-gray-900 text-sm">Adama Diallo</div>
+                  <div className="text-xs text-gray-600">Commerçant, Dakar</div>
                 </div>
-              </Card>
-            </div>
-
-            {/* Download Section */}
-            <div className="bg-gradient-to-r from-access-blue/5 to-access-green/5 rounded-2xl p-6 border border-gray-100">
-              <h3 className="text-xl font-montserrat font-bold text-access-blue mb-4 text-center">
-                Téléchargez l'Application GRATUITEMENT
-              </h3>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a 
-                  href="https://apps.apple.com/ci/app/access-pme/id6737127505"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto"
-                >
-                  <Button 
-                    size="lg" 
-                    className="bg-black hover:bg-gray-800 text-white px-6 py-3 text-base font-semibold w-full hover:scale-105 transition-transform duration-300"
-                  >
-                    <Download className="w-4 h-4 mr-2" />
-                    App Store
-                  </Button>
-                </a>
-                <a 
-                  href="https://play.google.com/store/apps/details?id=com.accesspme.app&pcampaignid=web_share&pli=1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto"
-                >
-                  <Button 
-                    size="lg" 
-                    className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 text-base font-semibold w-full hover:scale-105 transition-transform duration-300"
-                  >
-                    <Download className="w-4 h-4 mr-2" />
-                    Google Play
-                  </Button>
-                </a>
               </div>
+            </Card>
+
+            <Card className="bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-blue-500 p-4 hover:shadow-lg transition-shadow duration-300">
+              <blockquote className="text-sm italic text-gray-700 mb-3">
+                "Ma boutique en ligne via WhatsApp m'a permis de doubler mes ventes en 3 mois. Mes clients adorent commander directement !"
+              </blockquote>
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                  F
+                </div>
+                <div className="ml-3">
+                  <div className="font-semibold text-gray-900 text-sm">Fatou Sall</div>
+                  <div className="text-xs text-gray-600">Entrepreneur, Thiès</div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+
+        {/* Centered Download Section */}
+        <div className="max-w-2xl mx-auto">
+          <div className="bg-gradient-to-r from-access-blue/5 to-access-green/5 rounded-2xl p-6 border border-gray-100">
+            <h3 className="text-xl font-montserrat font-bold text-access-blue mb-4 text-center">
+              Téléchargez l'Application GRATUITEMENT
+            </h3>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a 
+                href="https://apps.apple.com/ci/app/access-pme/id6737127505"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
+                <Button 
+                  size="lg" 
+                  className="bg-black hover:bg-gray-800 text-white px-6 py-3 text-base font-semibold w-full hover:scale-105 transition-transform duration-300"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  App Store
+                </Button>
+              </a>
+              <a 
+                href="https://play.google.com/store/apps/details?id=com.accesspme.app&pcampaignid=web_share&pli=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
+                <Button 
+                  size="lg" 
+                  className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 text-base font-semibold w-full hover:scale-105 transition-transform duration-300"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  Google Play
+                </Button>
+              </a>
             </div>
           </div>
         </div>

@@ -4,16 +4,16 @@ import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram } from "lucide-react
 
 export const Footer = () => {
   return (
-    <footer id="contact" className="bg-gray-900 text-white">
+    <footer id="contact" className="bg-gray-800 text-white">
       <div className="container mx-auto px-4 lg:px-8 py-16">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info with larger logo */}
           <div className="col-span-1">
             <div className="flex items-center space-x-3 mb-8">
               <img 
-                src="/lovable-uploads/ef3f9179-5812-473a-a4df-6b57703baac3.png" 
+                src="/lovable-uploads/8fccf90b-64c9-453f-b897-79f5321a72ec.png" 
                 alt="ACCESS PME Logo" 
-                className="h-32 w-auto"
+                className="h-40 w-auto"
               />
             </div>
             <p className="text-gray-300 mb-8 leading-relaxed">
@@ -21,7 +21,7 @@ export const Footer = () => {
             </p>
             
             {/* Jokkolabs section with larger logo and new design */}
-            <div className="bg-gray-800 rounded-lg p-6 mb-6">
+            <div className="bg-gray-700 rounded-lg p-6 mb-6">
               <div className="flex items-center space-x-4">
                 <div>
                   <p className="text-sm text-gray-300 mb-1">Une initiative de</p>
@@ -29,22 +29,22 @@ export const Footer = () => {
                 </div>
                 <a href="http://www.jokkolabs.net/" target="_blank" rel="noopener noreferrer">
                   <img 
-                    src="/lovable-uploads/c07f16a2-c3fd-4039-b8aa-00b546c95a4a.png" 
+                    src="/lovable-uploads/cc944b22-79fa-49a7-8008-d5af30d17883.png" 
                     alt="Jokkolabs" 
-                    className="h-24 w-auto hover:scale-105 transition-transform duration-300"
+                    className="h-28 w-auto hover:scale-105 transition-transform duration-300"
                   />
                 </a>
               </div>
             </div>
             
             <div className="flex space-x-4">
-              <Instagram className="w-7 h-7 text-gray-400 hover:text-access-orange cursor-pointer transition-colors" />
-              <Facebook className="w-7 h-7 text-gray-400 hover:text-access-blue cursor-pointer transition-colors" />
-              <Linkedin className="w-7 h-7 text-gray-400 hover:text-access-blue cursor-pointer transition-colors" />
-              <svg className="w-7 h-7 text-gray-400 hover:text-access-orange cursor-pointer transition-colors" fill="currentColor" viewBox="0 0 24 24">
+              <Instagram className="w-8 h-8 text-gray-400 hover:text-access-orange cursor-pointer transition-colors" />
+              <Facebook className="w-8 h-8 text-gray-400 hover:text-access-blue cursor-pointer transition-colors" />
+              <Linkedin className="w-8 h-8 text-gray-400 hover:text-access-blue cursor-pointer transition-colors" />
+              <svg className="w-8 h-8 text-gray-400 hover:text-access-orange cursor-pointer transition-colors" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
               </svg>
-              <svg className="w-7 h-7 text-gray-400 hover:text-red-500 cursor-pointer transition-colors" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-8 h-8 text-gray-400 hover:text-red-500 cursor-pointer transition-colors" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
               </svg>
             </div>
@@ -92,7 +92,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <Separator className="my-8 bg-gray-700" />
+        <Separator className="my-8 bg-gray-600" />
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">

@@ -98,7 +98,7 @@ export const CTASection = () => {
               </div>
               
               <p className="text-sm opacity-70 mt-4">
-                ✓ Diagnostic personnalisé ✓ Analyse SWOT gratuite ✓ Plan d'action sur mesure
+                ✓ Diagnostic personnalisé ✓ Évaluation complète ✓ Plan d'action sur mesure
               </p>
             </CardContent>
           </Card>
