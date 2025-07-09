@@ -11,8 +11,8 @@ export const Footer = () => {
           <div className="col-span-1">
             <div className="flex items-center justify-center mb-8">
               <img 
-                src="/lovable-uploads/8fccf90b-64c9-453f-b897-79f5321a72ec.png" 
-                alt="ACCESS PME Logo" 
+                src="/lovable-uploads/cc944b22-79fa-49a7-8008-d5af30d17883.png" 
+                alt="Jokkolabs Logo" 
                 className="h-20 w-auto"
               />
             </div>
@@ -20,7 +20,7 @@ export const Footer = () => {
               Une équipe de professionnels spécialisés dans l'accompagnement des entrepreneurs.
             </p>
             
-            {/* Jokkolabs section repositioned */}
+            {/* ACCESS PME section repositioned */}
             <div className="bg-gray-800 rounded-lg p-4 mb-6">
               <div className="flex flex-col items-center space-y-3">
                 <div className="text-center">
@@ -28,8 +28,8 @@ export const Footer = () => {
                 </div>
                 <a href="http://www.jokkolabs.net/" target="_blank" rel="noopener noreferrer">
                   <img 
-                    src="/lovable-uploads/cc944b22-79fa-49a7-8008-d5af30d17883.png" 
-                    alt="Jokkolabs" 
+                    src="/lovable-uploads/8fccf90b-64c9-453f-b897-79f5321a72ec.png" 
+                    alt="ACCESS PME" 
                     className="h-12 w-auto hover:scale-105 transition-transform duration-300"
                   />
                 </a>

@@ -6,25 +6,25 @@ export const PainPointsSection = () => {
   const painPoints = [
     {
       title: "Commerçant",
-      subtitle: "Votre quotidien est difficile",
-      description: "Marges incalculables, stocks anarchiques, impayés invisibles...",
-      question: "Et si votre boutique tournait sans vous épuiser ?",
+      subtitle: "Votre quotidien vous déborde ?",
+      description: "Calculs de marges compliqués, stocks désorganisés, factures impayées qui s'accumulent...",
+      question: "Et si votre boutique générait plus de profits avec moins de stress ?",
       icon: Package,
       color: "bg-access-orange"
     },
     {
       title: "Startup",
-      subtitle: "Croissance = Complexité",
-      description: "Trésorerie imprévisible, reporting chronophage, décisions à l'aveugle...",
-      question: "Et si vous pilotiez votre croissance en temps réel ?",
+      subtitle: "Votre croissance vous échappe ?",
+      description: "Finances imprévisibles, rapports qui prennent des heures, décisions basées sur des suppositions...",
+      question: "Et si vous maîtrisiez votre croissance avec des données fiables ?",
       icon: TrendingDown,
       color: "bg-access-green"
     },
     {
       title: "Entrepreneur",
-      subtitle: "Passion vs Gestion",
-      description: "Créatif bridé par l'administratif, vision noyée dans les chiffres...",
-      question: "Et si la finance boostait votre créativité ?",
+      subtitle: "L'administratif tue votre créativité ?",
+      description: "Idées brillantes freinées par la paperasse, vision entrepreneuriale noyée dans les comptes...",
+      question: "Et si la gestion financière devenait votre meilleur allié créatif ?",
       icon: Repeat,
       color: "bg-access-blue"
     }

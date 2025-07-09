@@ -2,8 +2,19 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, Quote } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { useEffect, useState } from "react";
 
 export const TestimonialsSection = () => {
+  const [api, setApi] = useState<any>();
+  const [current, setCurrent] = useState(0);
+
   const testimonials = [
     {
       name: "Fatou Sall",
@@ -61,6 +72,35 @@ export const TestimonialsSection = () => {
     }
   ];
 
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 4000);
+
+    const handleMouseEnter = () => {
+      clearInterval(interval);
+    };
+
+    const handleMouseLeave = () => {
+      const newInterval = setInterval(() => {
+        api.scrollNext();
+      }, 4000);
+      return () => clearInterval(newInterval);
+    };
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [api]);
+
   return (
     <section id="testimonials" className="py-20 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
@@ -80,43 +120,61 @@ export const TestimonialsSection = () => {
           </div>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {testimonials.map((testimonial, index) => (
-            <Card 
-              key={index}
-              className="hover-lift border-0 shadow-lg hover:shadow-xl transition-all duration-300 group"
-            >
-              <CardContent className="p-6">
-                {/* Quote Icon */}
-                <Quote className="w-8 h-8 text-access-red/20 mb-4" />
-                
-                {/* Rating */}
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                
-                {/* Content */}
-                <blockquote className="text-gray-700 mb-6 leading-relaxed italic">
-                  "{testimonial.content}"
-                </blockquote>
-                
-                {/* Author */}
-                <div className="flex items-center">
-                  <div className={`w-12 h-12 ${testimonial.color} rounded-full flex items-center justify-center text-white font-bold mr-4 group-hover:scale-110 transition-transform duration-300`}>
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                    <div className="text-sm text-gray-600">{testimonial.role}</div>
-                    <div className="text-xs text-gray-500">{testimonial.location}</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+        {/* Testimonials Carousel */}
+        <div className="mb-16">
+          <Carousel
+            setApi={setApi}
+            className="w-full max-w-5xl mx-auto"
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            onMouseEnter={() => {
+              // Pause auto-scroll on hover
+            }}
+            onMouseLeave={() => {
+              // Resume auto-scroll
+            }}
+          >
+            <CarouselContent>
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <Card className="hover-lift border-0 shadow-lg hover:shadow-xl transition-all duration-300 group h-full">
+                    <CardContent className="p-6 flex flex-col h-full">
+                      {/* Quote Icon */}
+                      <Quote className="w-8 h-8 text-access-red/20 mb-4" />
+                      
+                      {/* Rating */}
+                      <div className="flex items-center mb-4">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                        ))}
+                      </div>
+                      
+                      {/* Content */}
+                      <blockquote className="text-gray-700 mb-6 leading-relaxed italic flex-grow">
+                        "{testimonial.content}"
+                      </blockquote>
+                      
+                      {/* Author */}
+                      <div className="flex items-center mt-auto">
+                        <div className={`w-12 h-12 ${testimonial.color} rounded-full flex items-center justify-center text-white font-bold mr-4 group-hover:scale-110 transition-transform duration-300`}>
+                          {testimonial.avatar}
+                        </div>
+                        <div>
+                          <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                          <div className="text-sm text-gray-600">{testimonial.role}</div>
+                          <div className="text-xs text-gray-500">{testimonial.location}</div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
 
         {/* Video Testimonial Section */}

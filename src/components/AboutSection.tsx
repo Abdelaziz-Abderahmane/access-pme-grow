@@ -66,12 +66,12 @@ export const AboutSection = () => {
                   </div>
                   
                   <div className="relative">
-                    <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                       <a href="http://www.jokkolabs.net/" target="_blank" rel="noopener noreferrer">
                         <img 
-                          src="/lovable-uploads/c07f16a2-c3fd-4039-b8aa-00b546c95a4a.png" 
+                          src="/lovable-uploads/6557697e-085f-4deb-99ce-6ad4d77fb066.png" 
                           alt="Jokkolabs - Social Change Hub" 
-                          className="h-20 w-auto hover:scale-110 transition-transform duration-300"
+                          className="h-24 w-auto hover:scale-110 transition-transform duration-300"
                         />
                       </a>
                     </div>
