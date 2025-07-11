@@ -57,6 +57,17 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-open-sans;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+
+  html {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+
+  /* Ensure no element exceeds viewport width */
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   h1, h2, h3, h4, h5, h6 {
