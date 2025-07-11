@@ -1,159 +1,171 @@
 
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { TrendingUp, ShoppingCart, Users, FileText, Download } from "lucide-react";
+import { TrendingUp, ShoppingBag, Bell, BarChart3, Smartphone, Download } from "lucide-react";
 
 export const AppShowcaseSection = () => {
-  const features = [
-    {
-      title: "Suivi trésorerie temps réel",
-      description: "Visualisez vos flux de trésorerie avec des graphiques intuitifs",
-      icon: TrendingUp,
-      color: "text-green-500"
-    },
-    {
-      title: "Boutique en ligne",
-      description: "Vendez partout en partageant simplement le lien de votre boutique",
-      icon: ShoppingCart,
-      color: "text-blue-500"
-    },
-    {
-      title: "Gestion des clients",
-      description: "Base de données complète avec historique des transactions",
-      icon: Users,
-      color: "text-purple-500"
-    },
-    {
-      title: "Facturation automatisée",
-      description: "Créez et envoyez des factures professionnelles",
-      icon: FileText,
-      color: "text-indigo-500"
-    }
-  ];
-
   return (
-    <section id="app" className="py-20 bg-white">
+    <section id="application" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 lg:px-8">
-        {/* Centered Title Section */}
+        {/* Section Header - Centered */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-access-blue mb-6">
-            L'Application <span className="text-access-orange">ACCESS PME</span>
+            Notre Application
           </h2>
           <p className="text-xl text-gray-600 font-open-sans max-w-3xl mx-auto">
+            L'Application ACCESS PME<br />
             Tout ce dont vous avez besoin pour gérer votre entreprise, dans votre poche
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left Side - App Image */}
+        {/* App Features - Aligned Layout */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          {/* App Image */}
           <div className="relative">
-            <div className="relative z-10">
+            <div className="bg-gradient-to-br from-access-blue to-access-green rounded-2xl p-8 shadow-2xl">
               <img 
-                src="/lovable-uploads/6a74f87f-c2f3-418e-a55f-88c4587e108c.png"
-                alt="Application ACCESS PME - Interface mobile"
-                className="w-full h-auto max-w-md mx-auto drop-shadow-2xl hover:scale-105 transition-transform duration-300"
+                src="/lovable-uploads/8fccf90b-64c9-453f-b897-79f5321a72ec.png" 
+                alt="Application ACCESS PME" 
+                className="w-full max-w-sm mx-auto rounded-lg shadow-lg"
               />
             </div>
-            
-            {/* Floating Elements */}
-            <div className="absolute -top-10 -left-10 w-20 h-20 bg-access-orange/10 rounded-full animate-float"></div>
-            <div className="absolute -bottom-10 -right-10 w-16 h-16 bg-access-blue/10 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
           </div>
 
-          {/* Right Side - Features */}
-          <div>
-            {/* Features Grid avec icônes colorées et animations */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-4 p-6 rounded-lg hover:bg-gray-50 transition-all duration-300 group border border-gray-100 hover:shadow-lg hover:-translate-y-1">
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br from-white to-gray-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0 shadow-md`}>
-                    <feature.icon className={`w-6 h-6 ${feature.color}`} />
+          {/* Features List */}
+          <div className="space-y-6">
+            <div className="flex items-start space-x-4 group">
+              <div className="bg-access-blue/10 rounded-full p-3 group-hover:scale-110 transition-transform duration-300">
+                <TrendingUp className="w-6 h-6 text-access-blue" />
+              </div>
+              <div>
+                <h3 className="text-xl font-montserrat font-bold text-access-blue mb-2">
+                  Suivi Trésorerie Temps Réel
+                </h3>
+                <p className="text-gray-600">
+                  Visualisez vos flux financiers instantanément et pilotez votre activité où que vous soyez
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4 group">
+              <div className="bg-access-green/10 rounded-full p-3 group-hover:scale-110 transition-transform duration-300">
+                <ShoppingBag className="w-6 h-6 text-access-green" />
+              </div>
+              <div>
+                <h3 className="text-xl font-montserrat font-bold text-access-green mb-2">
+                  Boutique en ligne
+                </h3>
+                <p className="text-gray-600">
+                  Vendez sur tous les canaux en partageant simplement le lien de votre boutique
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4 group">
+              <div className="bg-access-orange/10 rounded-full p-3 group-hover:scale-110 transition-transform duration-300">
+                <Bell className="w-6 h-6 text-access-orange" />
+              </div>
+              <div>
+                <h3 className="text-xl font-montserrat font-bold text-access-orange mb-2">
+                  Alertes Anti-Impayés
+                </h3>
+                <p className="text-gray-600">
+                  Recevez des notifications intelligentes pour éviter les retards de paiement
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4 group">
+              <div className="bg-access-red/10 rounded-full p-3 group-hover:scale-110 transition-transform duration-300">
+                <BarChart3 className="w-6 h-6 text-access-red" />
+              </div>
+              <div>
+                <h3 className="text-xl font-montserrat font-bold text-access-red mb-2">
+                  Rapports Détaillés
+                </h3>
+                <p className="text-gray-600">
+                  Générez des analyses complètes pour prendre des décisions éclairées
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Testimonials - Centered */}
+        <div className="text-center mb-12">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Card className="border-0 shadow-lg bg-white">
+              <CardContent className="p-6">
+                <p className="text-gray-700 italic mb-4">
+                  "Grâce au suivi temps réel, j'ai augmenté ma trésorerie de 30% en 3 mois !"
+                </p>
+                <div className="flex items-center justify-center">
+                  <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                    M
                   </div>
                   <div>
-                    <h3 className="text-lg font-montserrat font-bold text-gray-900 mb-2">
-                      {feature.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      {feature.description}
-                    </p>
+                    <div className="font-semibold">Moussa Diop</div>
+                    <div className="text-sm text-gray-600">Entrepreneur, Dakar</div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Centered Testimonials */}
-        <div className="mt-16 max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <Card className="bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-green-500 p-4 hover:shadow-lg transition-shadow duration-300">
-              <blockquote className="text-sm italic text-gray-700 mb-3">
-                "Le suivi de trésorerie m'a permis d'éviter plusieurs ruptures de stock et d'optimiser mes achats. Un outil indispensable !"
-              </blockquote>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                  A
-                </div>
-                <div className="ml-3">
-                  <div className="font-semibold text-gray-900 text-sm">Adama Diallo</div>
-                  <div className="text-xs text-gray-600">Commerçant, Dakar</div>
-                </div>
-              </div>
+              </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-blue-500 p-4 hover:shadow-lg transition-shadow duration-300">
-              <blockquote className="text-sm italic text-gray-700 mb-3">
-                "Ma boutique en ligne via WhatsApp m'a permis de doubler mes ventes en 3 mois. Mes clients adorent commander directement !"
-              </blockquote>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                  F
+            <Card className="border-0 shadow-lg bg-white">
+              <CardContent className="p-6">
+                <p className="text-gray-700 italic mb-4">
+                  "Ma boutique en ligne a multiplié mes ventes par 3. Je partage juste le lien !"
+                </p>
+                <div className="flex items-center justify-center">
+                  <div className="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                    F
+                  </div>
+                  <div>
+                    <div className="font-semibold">Fatou Sall</div>
+                    <div className="text-sm text-gray-600">Commerçante, Sandaga</div>
+                  </div>
                 </div>
-                <div className="ml-3">
-                  <div className="font-semibold text-gray-900 text-sm">Fatou Sall</div>
-                  <div className="text-xs text-gray-600">Entrepreneur, Thiès</div>
-                </div>
-              </div>
+              </CardContent>
             </Card>
           </div>
         </div>
 
-        {/* Centered Download Section */}
-        <div className="max-w-2xl mx-auto">
-          <div className="bg-gradient-to-r from-access-blue/5 to-access-green/5 rounded-2xl p-6 border border-gray-100">
-            <h3 className="text-xl font-montserrat font-bold text-access-blue mb-4 text-center">
-              Téléchargez l'Application GRATUITEMENT
-            </h3>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a 
-                href="https://apps.apple.com/ci/app/access-pme/id6737127505"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto"
-              >
-                <Button 
-                  size="lg" 
-                  className="bg-black hover:bg-gray-800 text-white px-6 py-3 text-base font-semibold w-full hover:scale-105 transition-transform duration-300"
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  App Store
-                </Button>
-              </a>
-              <a 
-                href="https://play.google.com/store/apps/details?id=com.accesspme.app&pcampaignid=web_share&pli=1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto"
-              >
-                <Button 
-                  size="lg" 
-                  className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 text-base font-semibold w-full hover:scale-105 transition-transform duration-300"
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  Google Play
-                </Button>
-              </a>
-            </div>
+        {/* Download Buttons - Centered */}
+        <div className="text-center">
+          <p className="text-lg font-montserrat font-semibold text-access-blue mb-6">
+            Téléchargez l'application gratuitement
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a 
+              href="https://apps.apple.com/ci/app/access-pme/id6737127505"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex"
+            >
+              <Button className="bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg flex items-center space-x-2">
+                <Download className="w-5 h-5" />
+                <div className="text-left">
+                  <div className="text-xs">Télécharger sur</div>
+                  <div className="text-sm font-semibold">App Store</div>
+                </div>
+              </Button>
+            </a>
+            
+            <a 
+              href="https://play.google.com/store/apps/details?id=com.accesspme.app&pcampaignid=web_share&pli=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex"
+            >
+              <Button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg flex items-center space-x-2">
+                <Download className="w-5 h-5" />
+                <div className="text-left">
+                  <div className="text-xs">Disponible sur</div>
+                  <div className="text-sm font-semibold">Google Play</div>
+                </div>
+              </Button>
+            </a>
           </div>
         </div>
       </div>

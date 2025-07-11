@@ -1,55 +1,99 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Play } from "lucide-react";
 
 export const HeroSection = () => {
-  const scrollToAbout = () => {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
-      {/* Background Video/Image Placeholder */}
-      <div className="absolute inset-0 z-0">
-        <div className="w-full h-full bg-gradient-to-br from-access-blue via-access-green to-access-orange flex items-center justify-center">
-          <div className="text-center text-white/20 font-montserrat text-6xl font-bold">
-            VIDEO BACKGROUND
+    <section className="min-h-screen bg-gradient-to-br from-access-beige via-white to-access-beige pt-20">
+      <div className="container mx-auto px-4 lg:px-8 pt-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+          {/* Left Content */}
+          <div className="space-y-8">
+            {/* Badge */}
+            <Badge className="bg-access-blue/10 text-access-blue border-access-blue/20 px-4 py-2 text-sm font-medium">
+              🚀 Solution N°1 pour PME Africaines
+            </Badge>
+
+            {/* Main Heading */}
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-bold text-access-blue leading-tight">
+              Libérez votre entreprise des 
+              <span className="text-access-red"> complexités financières</span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-xl md:text-2xl text-gray-600 font-open-sans leading-relaxed">
+              Conseil expert + Application tout-en-un = Croissance maîtrisée
+            </p>
+
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <span>+500 PME accompagnées</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                <span>95% de satisfaction</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                <span>App gratuite</span>
+              </div>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button 
+                onClick={() => scrollToSection('about')}
+                size="lg"
+                className="bg-access-red hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-full hover-lift"
+              >
+                En savoir plus
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </div>
+
+            {/* Partner Logos */}
+            <div className="pt-8">
+              <p className="text-sm text-gray-500 mb-4">Ils nous font confiance :</p>
+              <div className="flex items-center space-x-8 opacity-60">
+                <div className="text-2xl font-bold text-gray-400">BDK</div>
+                <div className="text-2xl font-bold text-gray-400">COFINA</div>
+                <img 
+                  src="/lovable-uploads/6da8b5d1-a6e3-4056-9c1b-35aec5b1f9b9.png" 
+                  alt="Jokkolabs" 
+                  className="h-8 opacity-60"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Right Content - Hero Image */}
+          <div className="relative">
+            <div className="relative bg-gradient-to-br from-access-blue to-access-green rounded-2xl p-8 shadow-2xl hover-lift">
+              <img 
+                src="/lovable-uploads/ef3f9179-5812-473a-a4df-6b57703baac3.png" 
+                alt="Entrepreneurs africains au travail" 
+                className="w-full rounded-lg shadow-lg"
+              />
+              
+              {/* Floating Elements */}
+              <div className="absolute -top-4 -right-4 bg-white rounded-full p-4 shadow-lg animate-bounce">
+                <div className="text-2xl">📈</div>
+              </div>
+              
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-full p-4 shadow-lg animate-pulse">
+                <div className="text-2xl">💰</div>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="absolute inset-0 hero-gradient"></div>
       </div>
-
-      <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center">
-        <div className="max-w-4xl mx-auto">
-          {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-bold text-white mb-6 leading-tight animate-fade-in text-shadow-lg">
-            Propulsez Votre Entreprise avec{" "}
-            <span className="text-yellow-300">ACCESS PME</span>
-          </h1>
-
-          {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-white/90 mb-8 font-open-sans font-light max-w-3xl mx-auto animate-slide-up text-shadow">
-            Une équipe de professionnels spécialisés dans l'accompagnement des entrepreneurs
-          </p>
-
-          {/* CTA Button */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-slide-up">
-            <Button 
-              size="lg" 
-              className="bg-access-orange hover:bg-access-orange/90 text-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-              onClick={scrollToAbout}
-            >
-              En savoir plus
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Floating Elements */}
-      <div className="absolute top-1/4 left-10 w-20 h-20 bg-access-orange/20 rounded-full blur-sm animate-float"></div>
-      <div className="absolute bottom-1/4 right-10 w-16 h-16 bg-access-green/20 rounded-full blur-sm animate-float" style={{animationDelay: '1s'}}></div>
-      <div className="absolute top-1/2 right-1/4 w-12 h-12 bg-access-blue/20 rounded-full blur-sm animate-float" style={{animationDelay: '2s'}}></div>
     </section>
   );
 };

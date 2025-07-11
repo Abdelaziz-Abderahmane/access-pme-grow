@@ -1,15 +1,11 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, MessageCircle, FileText, ArrowRight, MapPin, Mail } from "lucide-react";
+import { Phone, MessageCircle, ArrowRight, MapPin, Mail } from "lucide-react";
 
 export const CTASection = () => {
-  const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
-    <section className="py-20 bg-gradient-to-br from-access-blue via-access-blue/90 to-access-green">
+    <section id="cta" className="py-20 bg-gradient-to-br from-access-blue via-access-blue/90 to-access-green">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-4xl mx-auto text-center text-white">
           {/* Main Heading */}
@@ -82,12 +78,14 @@ export const CTASection = () => {
                 Diagnostic gratuit de votre activité
               </h3>
               <p className="text-lg opacity-90 mb-6">
-                Évaluation complète de vos forces et faiblesses + Plan d'action personnalisé
+                Évaluation complète de votre activité + Plan d'action personnalisé
               </p>
               
               <div className="flex justify-center">
                 <Button 
-                  onClick={() => scrollToSection('contact')}
+                  onClick={() => {
+                    document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                   className="bg-access-orange hover:bg-orange-700 text-white px-8 font-semibold"
                   size="lg"
                 >

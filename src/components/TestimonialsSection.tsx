@@ -29,7 +29,7 @@ export const TestimonialsSection = () => {
       name: "Moussa Diop",
       role: "Fondateur Startup",
       location: "Almadies, Dakar",
-      content: "L'application m'a fait gagner 10h par semaine sur ma comptabilité. Les rapports IA sont bluffants de précision !",
+      content: "L'application m'a fait gagner 10h par semaine sur ma comptabilité. Les rapports sont bluffants de précision !",
       rating: 5,
       avatar: "M",
       color: "bg-blue-500"
@@ -56,7 +56,7 @@ export const TestimonialsSection = () => {
       name: "Mariama Touré",
       role: "Commerçante",
       location: "Guédiawaye",
-      content: "La boutique WhatsApp intégrée m'a ouvert de nouveaux marchés. Mes ventes ont explosé !",
+      content: "La boutique en ligne m'a ouvert de nouveaux marchés. Mes ventes ont explosé !",
       rating: 5,
       avatar: "M",
       color: "bg-orange-500"
@@ -79,7 +79,7 @@ export const TestimonialsSection = () => {
 
     const interval = setInterval(() => {
       api.scrollNext();
-    }, 4000);
+    }, 6000); // Augmenté de 4000ms à 6000ms
 
     const handleMouseEnter = () => {
       clearInterval(interval);
@@ -88,7 +88,7 @@ export const TestimonialsSection = () => {
     const handleMouseLeave = () => {
       const newInterval = setInterval(() => {
         api.scrollNext();
-      }, 4000);
+      }, 6000);
       return () => clearInterval(newInterval);
     };
 
