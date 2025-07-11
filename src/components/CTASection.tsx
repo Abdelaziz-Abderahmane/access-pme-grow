@@ -1,11 +1,12 @@
 
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, MessageCircle, ArrowRight, MapPin, Mail } from "lucide-react";
+import { Phone, MessageCircle, FileText, ArrowRight, MapPin, Mail } from "lucide-react";
 
 export const CTASection = () => {
   return (
-    <section id="cta" className="py-20 bg-gradient-to-br from-access-blue via-access-blue/90 to-access-green">
+    <section className="py-20 bg-gradient-to-br from-access-blue via-access-blue/90 to-access-green">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-4xl mx-auto text-center text-white">
           {/* Main Heading */}
@@ -78,18 +79,20 @@ export const CTASection = () => {
                 Diagnostic gratuit de votre activité
               </h3>
               <p className="text-lg opacity-90 mb-6">
-                Évaluation complète de votre activité + Plan d'action personnalisé
+                Évaluation complète de vos forces et faiblesses + Plan d'action personnalisé
               </p>
               
-              <div className="flex justify-center">
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Input 
+                  type="email" 
+                  placeholder="Votre email professionnel"
+                  className="flex-1 bg-white/20 border-white/30 text-white placeholder:text-white/60 focus:bg-white/30"
+                />
                 <Button 
-                  onClick={() => {
-                    document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
                   className="bg-access-orange hover:bg-orange-700 text-white px-8 font-semibold"
                   size="lg"
                 >
-                  Contactez-nous
+                  Réserver
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </div>

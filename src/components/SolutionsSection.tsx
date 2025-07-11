@@ -1,117 +1,101 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Users, TrendingUp, Shield, GraduationCap, Smartphone, User, FileText, Banknote, Clock, Award } from "lucide-react";
+import { Briefcase, Smartphone, FileText, GraduationCap, BarChart3, Users } from "lucide-react";
 
 export const SolutionsSection = () => {
-  const services = [
+  const solutions = [
     {
-      icon: <User className="w-8 h-8 text-access-blue" />,
       title: "Diagnostic Personnalisé",
-      description: "Évaluation complète de votre activité"
+      description: "Évaluation complète de votre activité avec plan d'action personnalisé",
+      icon: Briefcase,
+      features: ["Audit complet", "Évaluation détaillée", "Plan d'action personnalisé"],
+      color: "from-indigo-500 to-indigo-600"
     },
     {
-      icon: <Banknote className="w-8 h-8 text-access-green" />,
-      title: "Assistance à la gestion financière",
-      description: "ACCESS PME vous aide à mieux comprendre vos chiffres et à évaluer vos leviers de financement."
+      title: "Assistance à la Gestion Financière",
+      description: "ACCESS PME vous aide à mieux comprendre vos chiffres et à évaluer vos leviers de financement",
+      icon: BarChart3,
+      features: ["Analyse financière", "Leviers de financement", "Optimisation trésorerie"],
+      color: "from-orange-500 to-orange-600"
     },
     {
-      icon: <FileText className="w-8 h-8 text-access-orange" />,
       title: "Assistance Administrative",
-      description: "Bénéficiez d'un accompagnement sur mesure dans vos démarches administratives."
+      description: "Bénéficiez d'un accompagnement sur mesure dans vos démarches administratives",
+      icon: FileText,
+      features: ["Déclarations automatiques", "Suivi conformité", "Accompagnement personnalisé"],
+      color: "from-purple-500 to-purple-600"
     },
     {
-      icon: <Users className="w-8 h-8 text-access-blue" />,
       title: "Accompagnement Humain",
-      description: "Bénéficiez des conseils personnalisés pour accroître votre activité."
+      description: "Bénéficiez des conseils personnalisés pour accroître votre activité",
+      icon: Users,
+      features: ["Conseiller dédié", "Suivi personnalisé", "Réseau d'entrepreneurs"],
+      color: "from-red-500 to-red-600"
     },
     {
-      icon: <GraduationCap className="w-8 h-8 text-access-green" />,
-      title: "Formation à la gestion financière",
-      description: "Maîtrisez vos finances grâce à nos programmes de formation approfondis et bénéficiez d'un support technique continu."
+      title: "Formation à la Gestion Financière",
+      description: "Maîtrisez vos finances grâce à nos programmes de formation approfondis",
+      icon: GraduationCap,
+      features: ["Formation personnalisée", "Suivi post-formation", "Support technique continu"],
+      color: "from-green-500 to-green-600"
     },
     {
-      icon: <Smartphone className="w-8 h-8 text-access-orange" />,
-      title: "Application de gestion de trésorerie & Boutique en ligne",
-      description: "Boostez vos ventes 24h/24 et pilotez votre trésorerie depuis votre smartphone."
+      title: "Application de Gestion de Trésorerie & Boutique en ligne",
+      description: "Boostez vos ventes 24h/24 et pilotez votre trésorerie depuis votre smartphone",
+      icon: Smartphone,
+      features: ["Gestion trésorerie temps réel", "Boutique en ligne intégrée", "Alertes automatiques"],
+      color: "from-blue-500 to-blue-600"
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="solutions" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-access-blue mb-6">
-            Nos Services
+            Des Solutions Complètes adaptées à vos besoins
           </h2>
           <p className="text-xl text-gray-600 font-open-sans max-w-3xl mx-auto">
-            Des Solutions Complètes adaptées à vos besoins
+            Un écosystème complet pour transformer votre gestion et libérer votre potentiel de croissance
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {services.map((service, index) => (
-            <Card key={index} className="hover-lift border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
-              <CardContent className="p-6 text-center">
-                <div className="bg-access-beige rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
+        {/* Solutions Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {solutions.map((solution, index) => (
+            <Card 
+              key={index}
+              className="hover-lift border-0 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+            >
+              <CardContent className="p-0">
+                {/* Icon Header */}
+                <div className={`bg-gradient-to-r ${solution.color} p-6 text-center`}>
+                  <solution.icon className="w-12 h-12 text-white mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                  <h3 className="text-xl font-montserrat font-bold text-white">
+                    {solution.title}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-montserrat font-bold text-access-blue mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 font-open-sans leading-relaxed">
-                  {service.description}
-                </p>
+                
+                {/* Content */}
+                <div className="p-6">
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    {solution.description}
+                  </p>
+                  
+                  {/* Features List */}
+                  <ul className="space-y-2">
+                    {solution.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">
+                        <div className="w-2 h-2 bg-access-orange rounded-full mr-3 flex-shrink-0"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Results Section */}
-        <div className="bg-gradient-to-r from-access-blue to-access-green rounded-2xl p-8 text-white">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-montserrat font-bold mb-4">
-              Résultats Concrets
-            </h3>
-            <p className="text-xl opacity-90">
-              Un accompagnement à la hauteur de vos engagements
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            <div className="text-center">
-              <div className="bg-white/20 rounded-full p-6 w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                <Award className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-4xl font-montserrat font-bold mb-2">95%</div>
-              <div className="text-sm opacity-90">se déclarent satisfaits et recommandent ACCESS PME</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-white/20 rounded-full p-6 w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                <TrendingUp className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-4xl font-montserrat font-bold mb-2">87%</div>
-              <div className="text-sm opacity-90">augmentation de trésorerie +20% en 6 mois</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-white/20 rounded-full p-6 w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-4xl font-montserrat font-bold mb-2">60%</div>
-              <div className="text-sm opacity-90">recrutent de nouveaux collaborateurs</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-white/20 rounded-full p-6 w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                <Clock className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-4xl font-montserrat font-bold mb-2">2/3</div>
-              <div className="text-sm opacity-90">gagnent un temps précieux pour leur cœur de métier</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
