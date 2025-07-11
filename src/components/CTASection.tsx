@@ -1,10 +1,13 @@
 
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, FileText, ArrowRight, MapPin, Mail } from "lucide-react";
 
 export const CTASection = () => {
+  const scrollToSection = (sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="py-20 bg-gradient-to-br from-access-blue via-access-blue/90 to-access-green">
       <div className="container mx-auto px-4 lg:px-8">
@@ -82,17 +85,13 @@ export const CTASection = () => {
                 Évaluation complète de vos forces et faiblesses + Plan d'action personnalisé
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Input 
-                  type="email" 
-                  placeholder="Votre email professionnel"
-                  className="flex-1 bg-white/20 border-white/30 text-white placeholder:text-white/60 focus:bg-white/30"
-                />
+              <div className="flex justify-center">
                 <Button 
+                  onClick={() => scrollToSection('contact')}
                   className="bg-access-orange hover:bg-orange-700 text-white px-8 font-semibold"
                   size="lg"
                 >
-                  Réserver
+                  Contactez-nous
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </div>
