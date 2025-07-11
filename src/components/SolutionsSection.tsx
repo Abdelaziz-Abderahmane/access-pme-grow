@@ -36,7 +36,7 @@ export const SolutionsSection = () => {
       title: "Formation à la Gestion Financière",
       description: "Maîtrisez vos finances grâce à nos programmes de formation approfondis",
       icon: GraduationCap,
-      features: ["Formation personnalisée", "Suivi post-formation", "Certification ACCESS PME"],
+      features: ["Formation personnalisée", "Suivi post-formation", "Support technique continu"],
       color: "from-green-500 to-green-600"
     },
     {
@@ -96,36 +96,6 @@ export const SolutionsSection = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Stats Section */}
-        <div className="mt-20 bg-white rounded-2xl shadow-xl p-8">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-montserrat font-bold text-access-blue mb-4">
-              Résultats Concrets
-            </h3>
-            <p className="text-gray-600">
-              Grâce à ACCESS PME, vous n'êtes plus seul(e) : vous avancez avec des conseils concrets
-            </p>
-          </div>
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-montserrat font-bold text-access-orange mb-2">95%</div>
-              <div className="text-gray-600">Satisfaction & recommandation</div>
-            </div>
-            <div>
-              <div className="text-4xl font-montserrat font-bold text-access-green mb-2">87%</div>
-              <div className="text-gray-600">Croissance trésorerie +20%</div>
-            </div>
-            <div>
-              <div className="text-4xl font-montserrat font-bold text-access-blue mb-2">60%</div>
-              <div className="text-gray-600">Recrutent des collaborateurs</div>
-            </div>
-            <div>
-              <div className="text-4xl font-montserrat font-bold text-access-orange mb-2">2/3</div>
-              <div className="text-gray-600">Gagnent un temps précieux</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

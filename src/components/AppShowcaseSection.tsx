@@ -13,7 +13,7 @@ export const AppShowcaseSection = () => {
     },
     {
       title: "Boutique en ligne",
-      description: "Vendez directement via WhatsApp avec catalogue intégré",
+      description: "Vendez partout en partageant simplement le lien de votre boutique",
       icon: ShoppingCart,
       color: "text-blue-500"
     },

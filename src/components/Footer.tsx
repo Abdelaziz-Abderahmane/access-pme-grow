@@ -12,7 +12,7 @@ export const Footer = () => {
             <div className="flex items-center justify-center mb-8">
               <img 
                 src="/lovable-uploads/cc944b22-79fa-49a7-8008-d5af30d17883.png" 
-                alt="Jokkolabs Logo" 
+                alt="ACCESS PME Logo" 
                 className="h-20 w-auto"
               />
             </div>
@@ -28,8 +28,8 @@ export const Footer = () => {
                 </div>
                 <a href="http://www.jokkolabs.net/" target="_blank" rel="noopener noreferrer">
                   <img 
-                    src="/lovable-uploads/8fccf90b-64c9-453f-b897-79f5321a72ec.png" 
-                    alt="ACCESS PME" 
+                    src="/lovable-uploads/6da8b5d1-a6e3-4056-9c1b-35aec5b1f9b9.png" 
+                    alt="Jokkolabs" 
                     className="h-12 w-auto hover:scale-105 transition-transform duration-300"
                   />
                 </a>
