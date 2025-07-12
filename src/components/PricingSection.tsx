@@ -64,7 +64,7 @@ export const PricingSection = () => {
         { name: "Boutique en ligne", included: true },
         { name: "Application Access PME", included: true }
       ],
-      buttonText: "Accès WARABA",
+      buttonText: "Choisir WARABA",
       buttonStyle: "primary",
       popular: false
     }
@@ -149,7 +149,7 @@ export const PricingSection = () => {
 
                 {/* CTA Button */}
                 <Button 
-                  onClick={() => scrollToSection('contact')}
+                  onClick={() => scrollToSection('cta-section')}
                   className={`w-full py-3 text-lg font-semibold ${
                     plan.buttonStyle === 'primary'
                       ? 'bg-access-orange hover:bg-orange-700 text-white'

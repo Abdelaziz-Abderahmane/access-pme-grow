@@ -69,10 +69,10 @@ export const CTASection = () => {
                 <h3 className="text-xl font-montserrat font-bold mb-2">Écrivez-nous</h3>
                 <p className="opacity-90 mb-4">Réponse sous 24h</p>
                 <a 
-                  href="mailto:Contact@access-pme.net"
+                  href="mailto:contact@access-pme.net"
                   className="text-green-300 font-bold text-lg hover:text-green-200 transition-colors"
                 >
-                  Contact@access-pme.net
+                  contact@access-pme.net
                 </a>
               </CardContent>
             </Card>

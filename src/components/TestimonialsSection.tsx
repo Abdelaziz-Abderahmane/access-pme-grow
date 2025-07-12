@@ -20,7 +20,7 @@ export const TestimonialsSection = () => {
       name: "Fatou Sall",
       role: "Commerçante",
       location: "Marché Sandaga, Dakar",
-      content: "Mon conseiller a libéré 4 millions FCFA de trésorerie en 3 mois ! Je peux enfin développer ma boutique sereinement.",
+      content: "Ma boutique en ligne via WhatsApp m'a permis de doubler mes ventes en 3 mois. Mes clients adorent commander directement !",
       rating: 5,
       avatar: "F",
       color: "bg-pink-500"
@@ -79,7 +79,7 @@ export const TestimonialsSection = () => {
 
     const interval = setInterval(() => {
       api.scrollNext();
-    }, 4000);
+    }, 2500); // Réduit de 4000ms à 2500ms pour plus de vitesse
 
     const handleMouseEnter = () => {
       clearInterval(interval);
@@ -88,7 +88,7 @@ export const TestimonialsSection = () => {
     const handleMouseLeave = () => {
       const newInterval = setInterval(() => {
         api.scrollNext();
-      }, 4000);
+      }, 2500);
       return () => clearInterval(newInterval);
     };
 

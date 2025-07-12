@@ -62,7 +62,7 @@ export const Header = () => {
                 variant="outline" 
                 size="sm" 
                 className="text-access-blue border-access-blue hover:bg-access-blue/10"
-                onClick={() => scrollToSection('contact')}
+                onClick={() => scrollToSection('cta-section')}
               >
                 <Phone className="w-4 h-4 mr-2" />
                 Contact
@@ -118,7 +118,7 @@ export const Header = () => {
                   variant="outline" 
                   size="sm" 
                   className="text-access-blue border-access-blue hover:bg-access-blue/10"
-                  onClick={() => scrollToSection('contact')}
+                  onClick={() => scrollToSection('cta-section')}
                 >
                   <Phone className="w-4 h-4 mr-2" />
                   Contact
