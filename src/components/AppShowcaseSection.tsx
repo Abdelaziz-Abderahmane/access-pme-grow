@@ -103,7 +103,7 @@ export const AppShowcaseSection = () => {
 
             <Card className="bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-blue-500 p-4 hover:shadow-lg transition-shadow duration-300">
               <blockquote className="text-sm italic text-gray-700 mb-3">
-                "Ma boutique en ligne via WhatsApp m'a permis de doubler mes ventes en 3 mois. Mes clients adorent commander directement !"
+                "Ma boutique en ligne avec gestion complète des produits et clients m'a permis de partager le lien et doubler mes ventes en 3 mois !"
               </blockquote>
               <div className="flex items-center">
                 <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">

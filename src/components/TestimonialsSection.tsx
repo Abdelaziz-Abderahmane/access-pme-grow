@@ -20,7 +20,7 @@ export const TestimonialsSection = () => {
       name: "Fatou Sall",
       role: "Commerçante",
       location: "Marché Sandaga, Dakar",
-      content: "Ma boutique en ligne via WhatsApp m'a permis de doubler mes ventes en 3 mois. Mes clients adorent commander directement !",
+      content: "Ma boutique en ligne me permet de gérer mes catégories, produits et clients facilement. Je partage le lien et mes ventes ont doublé en 3 mois !",
       rating: 5,
       avatar: "F",
       color: "bg-pink-500"
@@ -29,7 +29,7 @@ export const TestimonialsSection = () => {
       name: "Moussa Diop",
       role: "Fondateur Startup",
       location: "Almadies, Dakar",
-      content: "L'application m'a fait gagner 10h par semaine sur ma comptabilité. Les rapports IA sont bluffants de précision !",
+      content: "L'application m'a fait gagner 10h par semaine sur ma gestion financière. Le suivi de trésorerie en temps réel est parfait !",
       rating: 5,
       avatar: "M",
       color: "bg-blue-500"
@@ -38,7 +38,7 @@ export const TestimonialsSection = () => {
       name: "Aïcha Ba",
       role: "Entrepreneuse",
       location: "Thiès",
-      content: "Grâce à ACCESS PME, j'ai réduit mes impayés de 70% et doublé mon chiffre d'affaires en 6 mois.",
+      content: "Grâce aux conseils ACCESS PME et l'application, j'ai optimisé ma gestion financière et doublé mon chiffre d'affaires en 6 mois.",
       rating: 5,
       avatar: "A",
       color: "bg-green-500"
@@ -47,7 +47,7 @@ export const TestimonialsSection = () => {
       name: "Ibrahima Ndiaye",
       role: "Directeur PME",
       location: "Plateau, Dakar",
-      content: "L'accompagnement personnalisé a transformé notre vision de la finance. Notre équipe est enfin alignée !",
+      content: "L'accompagnement personnalisé a transformé notre vision de la gestion financière. Notre équipe maîtrise maintenant tous les outils !",
       rating: 5,
       avatar: "I",
       color: "bg-purple-500"
@@ -56,7 +56,7 @@ export const TestimonialsSection = () => {
       name: "Mariama Touré",
       role: "Commerçante",
       location: "Guédiawaye",
-      content: "La boutique WhatsApp intégrée m'a ouvert de nouveaux marchés. Mes ventes ont explosé !",
+      content: "La boutique en ligne intégrée avec gestion complète des produits m'a ouvert de nouveaux marchés. Mes ventes ont explosé !",
       rating: 5,
       avatar: "M",
       color: "bg-orange-500"
@@ -65,7 +65,7 @@ export const TestimonialsSection = () => {
       name: "Amadou Sy",
       role: "Gérant Restaurant",
       location: "Yoff, Dakar",
-      content: "Les alertes anti-impayés ont sauvé mon restaurant. Plus jamais de mauvaises surprises !",
+      content: "Les services de conseil et l'application pour le suivi financier ont sauvé mon restaurant. Plus jamais de mauvaises surprises !",
       rating: 5,
       avatar: "A",
       color: "bg-red-500"
