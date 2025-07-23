@@ -1,6 +1,7 @@
 
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
+import { VisionMissionSection } from "@/components/VisionMissionSection";
 import { PainPointsSection } from "@/components/PainPointsSection";
 import { SolutionsSection } from "@/components/SolutionsSection";
 import { AppShowcaseSection } from "@/components/AppShowcaseSection";
@@ -18,6 +19,7 @@ const Index = () => {
       <main className="w-full overflow-x-hidden">
         <HeroSection />
         <AboutSection />
+        <VisionMissionSection />
         <PainPointsSection />
         <SolutionsSection />
         <AppShowcaseSection />

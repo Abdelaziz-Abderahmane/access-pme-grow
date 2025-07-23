@@ -8,7 +8,7 @@ export const SolutionsSection = () => {
       title: "Diagnostic Personnalisé",
       description: "Évaluation complète de votre activité avec plan d'action personnalisé",
       icon: Briefcase,
-      features: ["Audit complet", "Évaluation détaillée", "Plan d'action personnalisé"],
+      features: ["Revue 360° de votre activité", "Évaluation détaillée", "Plan d'action personnalisé"],
       color: "from-indigo-500 to-indigo-600"
     },
     {
@@ -22,14 +22,14 @@ export const SolutionsSection = () => {
       title: "Assistance Administrative",
       description: "Bénéficiez d'un accompagnement sur mesure dans vos démarches administratives",
       icon: FileText,
-      features: ["Déclarations automatiques", "Suivi conformité", "Accompagnement personnalisé"],
+      features: ["Déclaration BRS, CGU etc..", "Suivi conformité", "Accompagnement personnalisé"],
       color: "from-purple-500 to-purple-600"
     },
     {
       title: "Accompagnement Humain",
       description: "Bénéficiez des conseils personnalisés pour accroître votre activité",
       icon: Users,
-      features: ["Conseiller dédié", "Suivi personnalisé", "Réseau d'entrepreneurs"],
+      features: ["Conseiller dédié", "Suivi de proximité", "Réseau d'entrepreneurs"],
       color: "from-red-500 to-red-600"
     },
     {
