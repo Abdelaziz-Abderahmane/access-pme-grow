@@ -34,7 +34,7 @@ export const VisionMissionSection = () => {
               </div>
               
               <p className="text-gray-700 leading-relaxed text-lg font-open-sans">
-                Access PME vise à être le <span className="font-semibold text-access-blue">partenaire de confiance</span> des petits entrepreneurs, 
+                Access PME vise à être le <span className="font-semibold text-access-blue">partenaire de confiance</span> des entrepreneurs, 
                 en leur fournissant des conseils financiers et non financiers pour favoriser leur croissance et leur intégration dans l'économie formelle.
               </p>
               
