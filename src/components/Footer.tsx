@@ -108,7 +108,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
           <div className="mb-4 md:mb-0">
-            <p>&copy; 2025 ACCESS PME.</p>
+            <p>&copy; 2026 ACCESS PME.</p>
           </div>
           <div className="flex space-x-6">
             <a href="#" className="hover:text-access-blue transition-colors">Mentions légales</a>

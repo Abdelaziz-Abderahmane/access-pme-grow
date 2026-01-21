@@ -62,32 +62,32 @@ export const SolutionsSection = () => {
         </div>
 
         {/* Solutions Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {solutions.map((solution, index) => (
             <Card 
               key={index}
               className="hover-lift border-0 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
             >
               <CardContent className="p-0">
-                {/* Icon Header */}
-                <div className={`bg-gradient-to-r ${solution.color} p-6 text-center`}>
-                  <solution.icon className="w-12 h-12 text-white mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                  <h3 className="text-xl font-montserrat font-bold text-white">
+                {/* Icon Header with subtle gradient background for title */}
+                <div className={`bg-gradient-to-r ${solution.color} p-4 text-center`}>
+                  <solution.icon className="w-10 h-10 text-white mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
+                  <h3 className="text-lg font-montserrat font-bold text-white bg-gradient-to-r from-white/10 to-white/5 px-3 py-1 rounded-lg inline-block">
                     {solution.title}
                   </h3>
                 </div>
                 
                 {/* Content */}
-                <div className="p-6">
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                <div className="p-4">
+                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
                     {solution.description}
                   </p>
                   
                   {/* Features List */}
-                  <ul className="space-y-2">
+                  <ul className="space-y-1.5">
                     {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                        <div className="w-2 h-2 bg-access-orange rounded-full mr-3 flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-access-orange rounded-full mr-2 flex-shrink-0"></div>
                         {feature}
                       </li>
                     ))}
