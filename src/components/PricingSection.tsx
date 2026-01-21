@@ -76,17 +76,8 @@ export const PricingSection = () => {
       price: "Sur mesure",
       period: "",
       description: "Offre spéciale entreprises",
-      priceNote: "Tarification personnalisée",
-      features: [
-        { name: "Assistance gestion financière", included: true },
-        { name: "Déclaration fiscale et sociale", included: true },
-        { name: "Conseil stratégique et Opérationnel", included: true },
-        { name: "Assistance administrative", included: true },
-        { name: "Rapport d'activité (mensuel)", included: true },
-        { name: "Conseiller de proximité dédié", included: true },
-        { name: "Boutique en ligne premium", included: true },
-        { name: "Application Access PME", included: true }
-      ],
+      priceNote: "",
+      features: [],
       buttonText: "Nous contacter",
       buttonStyle: "primary",
       popular: false,
@@ -159,26 +150,37 @@ export const PricingSection = () => {
                   <span className="text-4xl font-montserrat font-bold text-access-orange">
                     {plan.price}
                   </span>
-                  <span className="text-gray-600 ml-1">FCFA{plan.period}</span>
+                  {plan.period && <span className="text-gray-600 ml-1">FCFA{plan.period}</span>}
                 </div>
               </CardHeader>
 
               <CardContent>
-                {/* Features List */}
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      {feature.included ? (
-                        <Check className="w-5 h-5 text-access-green mr-3 flex-shrink-0" />
-                      ) : (
-                        <X className="w-5 h-5 text-red-500 mr-3 flex-shrink-0" />
-                      )}
-                      <span className={feature.included ? 'text-gray-700' : 'text-gray-400'}>
-                        {feature.name}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+                {/* Features List - Only show if features exist */}
+                {plan.features.length > 0 && (
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center">
+                        {feature.included ? (
+                          <Check className="w-5 h-5 text-access-green mr-3 flex-shrink-0" />
+                        ) : (
+                          <X className="w-5 h-5 text-red-500 mr-3 flex-shrink-0" />
+                        )}
+                        <span className={feature.included ? 'text-gray-700' : 'text-gray-400'}>
+                          {feature.name}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                
+                {/* Enterprise special message */}
+                {plan.isEnterprise && (
+                  <div className="text-center mb-8 py-6">
+                    <p className="text-gray-600 text-lg leading-relaxed">
+                      Une solution personnalisée pour répondre aux besoins spécifiques de votre entreprise
+                    </p>
+                  </div>
+                )}
 
                 {/* CTA Button */}
                 <Button 
