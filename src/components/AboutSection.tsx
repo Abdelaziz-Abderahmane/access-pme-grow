@@ -15,7 +15,7 @@ export const AboutSection = () => {
               À propos
             </h2>
             <p className="text-xl text-gray-600 font-open-sans max-w-3xl mx-auto leading-relaxed">
-              Propulsez Votre Entreprise : Découvrez ACCESS PME
+              Propulsez Votre Activité : Découvrez ACCESS PME
             </p>
           </div>
 
