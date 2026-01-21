@@ -12,35 +12,35 @@ export const CTASection = () => {
   };
 
   return (
-    <section id="cta-section" className="py-20 bg-gradient-to-br from-access-blue via-access-blue/90 to-access-green">
+    <section id="cta-section" className="py-20 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center text-white">
+        <div className="max-w-4xl mx-auto text-center text-gray-900">
           {/* Main Heading */}
-          <h2 className="text-4xl md:text-6xl font-montserrat font-bold mb-6 text-shadow-lg">
+          <h2 className="text-4xl md:text-6xl font-montserrat font-bold mb-6 text-access-blue">
             Votre succès commence maintenant !
           </h2>
-          <p className="text-xl md:text-2xl opacity-90 mb-12 font-open-sans text-shadow">
+          <p className="text-xl md:text-2xl text-gray-600 mb-12 font-open-sans">
             Prenez rendez-vous et bénéficiez d'un diagnostic gratuit de votre activité
           </p>
 
           {/* Contact Options */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Phone */}
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover-lift">
+            <Card className="bg-gray-50 border-gray-200 hover-lift shadow-lg">
               <CardContent className="p-6 text-center">
-                <Phone className="w-12 h-12 mx-auto mb-4 text-yellow-300" />
-                <h3 className="text-xl font-montserrat font-bold mb-2">Appelez-nous</h3>
-                <p className="opacity-90 mb-4">Conseiller disponible 8h-18h</p>
+                <Phone className="w-12 h-12 mx-auto mb-4 text-access-orange" />
+                <h3 className="text-xl font-montserrat font-bold mb-2 text-gray-900">Appelez-nous</h3>
+                <p className="text-gray-600 mb-4">Conseiller disponible 8h-18h</p>
                 <div className="space-y-2">
                   <a 
                     href="tel:+221338273821" 
-                    className="block text-yellow-300 font-bold text-lg hover:text-yellow-200 transition-colors"
+                    className="block text-access-blue font-bold text-lg hover:text-access-orange transition-colors"
                   >
                     +221 33 827 38 21
                   </a>
                   <a 
                     href="tel:+221785327559" 
-                    className="block text-yellow-300 font-bold text-lg hover:text-yellow-200 transition-colors"
+                    className="block text-access-blue font-bold text-lg hover:text-access-orange transition-colors"
                   >
                     +221 78 532 75 59
                   </a>
@@ -49,12 +49,12 @@ export const CTASection = () => {
             </Card>
 
             {/* Address */}
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover-lift">
+            <Card className="bg-gray-50 border-gray-200 hover-lift shadow-lg">
               <CardContent className="p-6 text-center">
-                <MapPin className="w-12 h-12 mx-auto mb-4 text-blue-300" />
-                <h3 className="text-xl font-montserrat font-bold mb-2">Visitez-nous</h3>
-                <p className="opacity-90 mb-4">Bureau principal</p>
-                <p className="text-blue-200 font-semibold">
+                <MapPin className="w-12 h-12 mx-auto mb-4 text-access-blue" />
+                <h3 className="text-xl font-montserrat font-bold mb-2 text-gray-900">Visitez-nous</h3>
+                <p className="text-gray-600 mb-4">Bureau principal</p>
+                <p className="text-access-blue font-semibold">
                   Sacré Cœur 3<br />
                   Villa N° 9653<br />
                   Dakar, Sénégal
@@ -63,14 +63,14 @@ export const CTASection = () => {
             </Card>
 
             {/* Email */}
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover-lift">
+            <Card className="bg-gray-50 border-gray-200 hover-lift shadow-lg">
               <CardContent className="p-6 text-center">
-                <Mail className="w-12 h-12 mx-auto mb-4 text-green-300" />
-                <h3 className="text-xl font-montserrat font-bold mb-2">Écrivez-nous</h3>
-                <p className="opacity-90 mb-4">Réponse sous 24h</p>
+                <Mail className="w-12 h-12 mx-auto mb-4 text-access-green" />
+                <h3 className="text-xl font-montserrat font-bold mb-2 text-gray-900">Écrivez-nous</h3>
+                <p className="text-gray-600 mb-4">Réponse sous 24h</p>
                 <a 
                   href="mailto:contact@access-pme.net"
-                  className="text-green-300 font-bold text-lg hover:text-green-200 transition-colors"
+                  className="text-access-green font-bold text-lg hover:text-access-blue transition-colors"
                 >
                   contact@access-pme.net
                 </a>
@@ -79,7 +79,7 @@ export const CTASection = () => {
           </div>
 
           {/* Lead Magnet Call to Action */}
-          <Card className="bg-white/10 backdrop-blur-sm border-white/20 max-w-2xl mx-auto">
+          <Card className="bg-gradient-to-r from-access-blue to-access-green max-w-2xl mx-auto text-white">
             <CardContent className="p-8">
               <h3 className="text-2xl font-montserrat font-bold mb-4">
                 Diagnostic gratuit de votre activité
@@ -105,10 +105,10 @@ export const CTASection = () => {
 
           {/* Final Message */}
           <div className="mt-16 text-center">
-            <p className="text-lg opacity-90 font-open-sans">
+            <p className="text-lg text-gray-600 font-open-sans">
               Libérez tout votre potentiel de croissance
             </p>
-            <p className="text-2xl font-montserrat font-bold mt-2 text-yellow-300">
+            <p className="text-2xl font-montserrat font-bold mt-2 text-access-orange">
               Votre Succès, Notre Engagement !
             </p>
           </div>

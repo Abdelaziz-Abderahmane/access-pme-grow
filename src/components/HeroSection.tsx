@@ -23,7 +23,7 @@ export const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-bold text-white mb-6 leading-tight animate-fade-in text-shadow-lg">
-            Propulsez Votre Entreprise avec{" "}
+            Propulsez Votre Activité avec{" "}
             <span className="text-yellow-300">ACCESS PME</span>
           </h1>
 

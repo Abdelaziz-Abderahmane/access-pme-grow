@@ -15,6 +15,7 @@ export const PricingSection = () => {
       price: "7 000",
       period: "/mois",
       description: "Parfait pour débuter",
+      priceNote: "",
       features: [
         { name: "Assistance gestion financière", included: false },
         { name: "Déclaration fiscale et sociale", included: false },
@@ -26,7 +27,7 @@ export const PricingSection = () => {
         { name: "Application Access PME", included: true }
       ],
       buttonText: "Commencer",
-      buttonStyle: "outline",
+      buttonStyle: "primary",
       popular: false
     },
     {
@@ -34,6 +35,7 @@ export const PricingSection = () => {
       price: "25 000",
       period: "/mois",
       description: "Le plus populaire",
+      priceNote: "À partir de 25 000 FCFA / mois",
       features: [
         { name: "Assistance gestion financière", included: false },
         { name: "Déclaration fiscale et sociale", included: false },
@@ -51,9 +53,10 @@ export const PricingSection = () => {
     },
     {
       name: "WARABA",
-      price: "60 000",
+      price: "75 000",
       period: "/mois",
       description: "Solution complète",
+      priceNote: "À partir de 75 000 FCFA / mois",
       features: [
         { name: "Assistance gestion financière", included: true },
         { name: "Déclaration fiscale et sociale", included: true },
@@ -67,6 +70,27 @@ export const PricingSection = () => {
       buttonText: "Choisir WARABA",
       buttonStyle: "primary",
       popular: false
+    },
+    {
+      name: "ENTREPRISE",
+      price: "Sur mesure",
+      period: "",
+      description: "Offre spéciale entreprises",
+      priceNote: "Tarification personnalisée",
+      features: [
+        { name: "Assistance gestion financière", included: true },
+        { name: "Déclaration fiscale et sociale", included: true },
+        { name: "Conseil stratégique et Opérationnel", included: true },
+        { name: "Assistance administrative", included: true },
+        { name: "Rapport d'activité (mensuel)", included: true },
+        { name: "Conseiller de proximité dédié", included: true },
+        { name: "Boutique en ligne premium", included: true },
+        { name: "Application Access PME", included: true }
+      ],
+      buttonText: "Nous contacter",
+      buttonStyle: "primary",
+      popular: false,
+      isEnterprise: true
     }
   ];
 
@@ -94,13 +118,15 @@ export const PricingSection = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {plans.map((plan, index) => (
             <Card 
               key={index}
               className={`relative hover-lift transition-all duration-300 ${
                 plan.popular 
                   ? 'border-access-orange shadow-xl scale-105 bg-white' 
+                  : plan.isEnterprise
+                  ? 'border-access-blue shadow-xl bg-gradient-to-b from-access-blue/5 to-white'
                   : 'border-gray-200 shadow-lg bg-white'
               }`}
             >
@@ -108,6 +134,13 @@ export const PricingSection = () => {
                 <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-access-orange text-white px-4 py-1">
                   <Star className="w-4 h-4 mr-1" />
                   Plus populaire
+                </Badge>
+              )}
+
+              {plan.isEnterprise && (
+                <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-access-blue text-white px-4 py-1">
+                  <Zap className="w-4 h-4 mr-1" />
+                  Offre Spéciale
                 </Badge>
               )}
               
@@ -150,11 +183,7 @@ export const PricingSection = () => {
                 {/* CTA Button */}
                 <Button 
                   onClick={() => scrollToSection('cta-section')}
-                  className={`w-full py-3 text-lg font-semibold ${
-                    plan.buttonStyle === 'primary'
-                      ? 'bg-access-orange hover:bg-orange-700 text-white'
-                      : 'bg-white border-2 border-access-orange text-access-orange hover:bg-access-orange hover:text-white'
-                  }`}
+                  className="w-full py-3 text-lg font-semibold bg-access-orange hover:bg-orange-700 text-white"
                 >
                   {plan.buttonText}
                 </Button>
@@ -169,25 +198,22 @@ export const PricingSection = () => {
             <h3 className="text-2xl font-montserrat font-bold text-access-blue mb-4">
               Résultats Concrets
             </h3>
-            <p className="text-gray-600">
-              Grâce à ACCESS PME, vous n'êtes plus seul(e) : vous avancez avec des conseils concrets
-            </p>
           </div>
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-montserrat font-bold text-access-orange mb-2">95%</div>
+              <div className="text-4xl font-montserrat font-bold text-gray-800 mb-2">95%</div>
               <div className="text-gray-600">Satisfaction & recommandation</div>
             </div>
             <div>
-              <div className="text-4xl font-montserrat font-bold text-access-green mb-2">87%</div>
+              <div className="text-4xl font-montserrat font-bold text-gray-800 mb-2">87%</div>
               <div className="text-gray-600">Croissance trésorerie +20%</div>
             </div>
             <div>
-              <div className="text-4xl font-montserrat font-bold text-access-blue mb-2">60%</div>
+              <div className="text-4xl font-montserrat font-bold text-gray-800 mb-2">60%</div>
               <div className="text-gray-600">Recrutent des collaborateurs</div>
             </div>
             <div>
-              <div className="text-4xl font-montserrat font-bold text-access-orange mb-2">2/3</div>
+              <div className="text-4xl font-montserrat font-bold text-gray-800 mb-2">2/3</div>
               <div className="text-gray-600">Gagnent un temps précieux</div>
             </div>
           </div>

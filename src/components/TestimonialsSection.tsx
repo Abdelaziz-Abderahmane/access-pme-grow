@@ -22,8 +22,7 @@ export const TestimonialsSection = () => {
       location: "Marché Sandaga, Dakar",
       content: "Ma boutique en ligne me permet de gérer mes catégories, produits et clients facilement. Je partage le lien et mes ventes ont doublé en 3 mois !",
       rating: 5,
-      avatar: "F",
-      color: "bg-pink-500"
+      avatar: "F"
     },
     {
       name: "Moussa Diop",
@@ -31,8 +30,7 @@ export const TestimonialsSection = () => {
       location: "Almadies, Dakar",
       content: "L'application m'a fait gagner 10h par semaine sur ma gestion financière. Le suivi de trésorerie en temps réel est parfait !",
       rating: 5,
-      avatar: "M",
-      color: "bg-blue-500"
+      avatar: "M"
     },
     {
       name: "Aïcha Ba",
@@ -40,8 +38,7 @@ export const TestimonialsSection = () => {
       location: "Thiès",
       content: "Grâce aux conseils ACCESS PME et l'application, j'ai optimisé ma gestion financière et doublé mon chiffre d'affaires en 6 mois.",
       rating: 5,
-      avatar: "A",
-      color: "bg-green-500"
+      avatar: "A"
     },
     {
       name: "Ibrahima Ndiaye",
@@ -49,8 +46,7 @@ export const TestimonialsSection = () => {
       location: "Plateau, Dakar",
       content: "L'accompagnement personnalisé a transformé notre vision de la gestion financière. Notre équipe maîtrise maintenant tous les outils !",
       rating: 5,
-      avatar: "I",
-      color: "bg-purple-500"
+      avatar: "I"
     },
     {
       name: "Mariama Touré",
@@ -58,8 +54,7 @@ export const TestimonialsSection = () => {
       location: "Guédiawaye",
       content: "La boutique en ligne intégrée avec gestion complète des produits m'a ouvert de nouveaux marchés. Mes ventes ont explosé !",
       rating: 5,
-      avatar: "M",
-      color: "bg-orange-500"
+      avatar: "M"
     },
     {
       name: "Amadou Sy",
@@ -67,8 +62,7 @@ export const TestimonialsSection = () => {
       location: "Yoff, Dakar",
       content: "Les services de conseil et l'application pour le suivi financier ont sauvé mon restaurant. Plus jamais de mauvaises surprises !",
       rating: 5,
-      avatar: "A",
-      color: "bg-red-500"
+      avatar: "A"
     }
   ];
 
@@ -107,7 +101,7 @@ export const TestimonialsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-access-blue mb-6">
-            Témoignages Vivants
+            Témoignages
           </h2>
           <p className="text-xl text-gray-600 font-open-sans max-w-3xl mx-auto mb-8">
             Découvrez comment nos clients transforment leur business avec ACCESS PME
@@ -158,7 +152,7 @@ export const TestimonialsSection = () => {
                       
                       {/* Author */}
                       <div className="flex items-center mt-auto">
-                        <div className={`w-12 h-12 ${testimonial.color} rounded-full flex items-center justify-center text-white font-bold mr-4 group-hover:scale-110 transition-transform duration-300`}>
+                        <div className="w-12 h-12 bg-access-blue rounded-full flex items-center justify-center text-white font-bold mr-4 group-hover:scale-110 transition-transform duration-300">
                           {testimonial.avatar}
                         </div>
                         <div>
@@ -175,23 +169,6 @@ export const TestimonialsSection = () => {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
-        </div>
-
-        {/* Video Testimonial Section */}
-        <div className="bg-gradient-to-r from-access-blue to-access-red rounded-2xl p-8 text-white text-center">
-          <h3 className="text-2xl font-montserrat font-bold mb-4">
-            Écoutez nos entrepreneurs parler de leur transformation
-          </h3>
-          <p className="text-lg opacity-90 mb-6">
-            Des témoignages vidéo authentiques de nos clients les plus fidèles
-          </p>
-          <div className="bg-white/20 backdrop-blur-sm rounded-lg p-8 max-w-md mx-auto">
-            <div className="w-16 h-16 bg-white/30 rounded-full flex items-center justify-center mx-auto mb-4">
-              <div className="w-0 h-0 border-l-6 border-r-0 border-t-4 border-b-4 border-l-white border-t-transparent border-b-transparent ml-1"></div>
-            </div>
-            <p className="text-sm font-medium">Vidéos témoignages</p>
-            <p className="text-xs opacity-80">Bientôt disponible</p>
-          </div>
         </div>
       </div>
     </section>
