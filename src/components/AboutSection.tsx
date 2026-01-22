@@ -34,18 +34,13 @@ export const AboutSection = () => {
             </div>
 
             {/* Image des conseillers africains */}
-            <div className="animate-slide-up">
-              <div className="relative group">
+            <div>
+              <div className="relative">
                 <img 
                   src="/lovable-uploads/53692a86-e6a6-4fef-9530-8ed4a7de37b8.png"
                   alt="Conseillers ACCESS PME en réunion" 
-                  className="rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 group-hover:scale-105"
+                  className="rounded-2xl shadow-xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-access-blue/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
-                {/* Animation floating elements around image */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-access-orange rounded-full animate-bounce opacity-70"></div>
-                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-access-green rounded-full animate-pulse opacity-70"></div>
               </div>
             </div>
           </div>

@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
 import { useState } from "react";
+import jokkolabsLogo from "@/assets/jokkolabs-logo.png";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,13 +16,28 @@ export const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-24">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
+          {/* Logo ACCESS PME + Separator + Jokkolabs */}
+          <div className="flex items-center">
             <img 
               src="/lovable-uploads/ef3f9179-5812-473a-a4df-6b57703baac3.png" 
               alt="ACCESS PME Logo" 
               className="h-32 w-auto"
             />
+            
+            {/* Separator */}
+            <div className="hidden sm:block h-12 w-px bg-gray-300 mx-4"></div>
+            
+            {/* Jokkolabs branding */}
+            <div className="hidden sm:flex flex-col items-start">
+              <span className="text-xs text-gray-500 font-open-sans">Une initiative de</span>
+              <a href="http://www.jokkolabs.net/" target="_blank" rel="noopener noreferrer">
+                <img 
+                  src={jokkolabsLogo} 
+                  alt="Jokkolabs - Social Change Hub" 
+                  className="h-8 w-auto hover:opacity-80 transition-opacity"
+                />
+              </a>
+            </div>
           </div>
 
           {/* Desktop Navigation - Positioned to the right */}
@@ -82,6 +98,18 @@ export const Header = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-200 py-4">
+            {/* Jokkolabs branding for mobile */}
+            <div className="flex items-center justify-center gap-2 pb-4 mb-4 border-b border-gray-100">
+              <span className="text-xs text-gray-500 font-open-sans">Une initiative de</span>
+              <a href="http://www.jokkolabs.net/" target="_blank" rel="noopener noreferrer">
+                <img 
+                  src={jokkolabsLogo} 
+                  alt="Jokkolabs - Social Change Hub" 
+                  className="h-6 w-auto"
+                />
+              </a>
+            </div>
+            
             <div className="flex flex-col space-y-4">
               <button 
                 onClick={() => scrollToSection('about')}

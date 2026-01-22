@@ -27,7 +27,7 @@ export const ResultsSection = () => {
             <div className="bg-access-green/10 rounded-full p-6 w-20 h-20 mx-auto mb-4 flex items-center justify-center">
               <TrendingUp className="w-8 h-8 text-access-green" />
             </div>
-            <div className="text-4xl font-montserrat font-bold text-access-green mb-2">87%</div>
+            <div className="text-4xl font-montserrat font-bold text-access-blue mb-2">87%</div>
             <div className="text-gray-600 text-sm">augmentation de trésorerie +20% en 6 mois</div>
           </div>
           
@@ -35,7 +35,7 @@ export const ResultsSection = () => {
             <div className="bg-access-orange/10 rounded-full p-6 w-20 h-20 mx-auto mb-4 flex items-center justify-center">
               <Users className="w-8 h-8 text-access-orange" />
             </div>
-            <div className="text-4xl font-montserrat font-bold text-access-orange mb-2">60%</div>
+            <div className="text-4xl font-montserrat font-bold text-access-blue mb-2">60%</div>
             <div className="text-gray-600 text-sm">recrutent de nouveaux collaborateurs</div>
           </div>
           
