@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Repeat, TrendingDown, Package, AlertTriangle } from "lucide-react";
+import { Repeat, TrendingDown, Package } from "lucide-react";
 
 export const PainPointsSection = () => {
   const painPoints = [
@@ -88,10 +88,9 @@ export const PainPointsSection = () => {
             <h3 className="text-2xl font-montserrat font-bold mb-4">
               Quel que soit votre profil...
             </h3>
-            <p className="text-lg mb-6 opacity-90">
+            <p className="text-lg opacity-90">
               Nous avons la solution adaptée à vos besoins spécifiques
             </p>
-            <AlertTriangle className="w-12 h-12 mx-auto text-yellow-300 animate-pulse" />
           </div>
         </div>
       </div>

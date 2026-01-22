@@ -1,6 +1,14 @@
-import { Target, Heart } from "lucide-react";
+import { Target, Heart, Shield, Scale, Eye, Handshake, CheckCircle } from "lucide-react";
 
 export const VisionMissionSection = () => {
+  const values = [
+    { name: "Confidentialité", icon: Shield },
+    { name: "Intégrité", icon: CheckCircle },
+    { name: "Transparence", icon: Eye },
+    { name: "Équité", icon: Scale },
+    { name: "Responsabilité", icon: Handshake }
+  ];
+
   return (
     <section className="py-20 bg-gradient-to-br from-access-blue/5 via-white to-access-orange/5 relative overflow-hidden">
       {/* Background decorative elements */}
@@ -20,7 +28,7 @@ export const VisionMissionSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-16">
           {/* Vision */}
           <div className="group">
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-access-blue/20 h-full">
@@ -74,11 +82,28 @@ export const VisionMissionSection = () => {
           </div>
         </div>
 
-        {/* Call to action subtle */}
-        <div className="text-center mt-16">
-          <div className="inline-flex items-center bg-white rounded-full px-8 py-4 shadow-md border border-gray-100">
-            <span className="text-gray-600 font-open-sans mr-2">Prêt à grandir avec nous ?</span>
-            <span className="text-access-blue font-semibold">Découvrez nos solutions</span>
+        {/* Nos Valeurs */}
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-10">
+            <h3 className="text-3xl font-montserrat font-bold text-access-blue mb-4">
+              Nos Valeurs
+            </h3>
+          </div>
+          
+          <div className="flex flex-wrap justify-center gap-4">
+            {values.map((value, index) => (
+              <div 
+                key={index}
+                className="bg-white rounded-xl px-6 py-4 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-access-blue/20 flex items-center gap-3"
+              >
+                <div className="bg-access-blue/10 p-2 rounded-lg">
+                  <value.icon className="w-5 h-5 text-access-blue" />
+                </div>
+                <span className="font-montserrat font-semibold text-gray-800">
+                  {value.name}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

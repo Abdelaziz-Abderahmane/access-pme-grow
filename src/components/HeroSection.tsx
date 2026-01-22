@@ -22,8 +22,8 @@ export const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-bold text-white mb-6 leading-tight animate-fade-in text-shadow-lg">
-            Propulsez Votre Activité avec{" "}
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-montserrat font-bold text-white mb-6 leading-snug animate-fade-in text-shadow-lg">
+            Boostez Votre Activité avec{" "}
             <span className="text-yellow-300">ACCESS PME</span>
           </h1>
 
