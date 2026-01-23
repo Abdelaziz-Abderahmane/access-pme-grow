@@ -34,7 +34,7 @@ export const PricingSection = () => {
       name: "NDANANE",
       price: "25 000",
       period: "/mois",
-      description: "Le plus populaire",
+      description: "À partir de",
       priceNote: "À partir de 25 000 FCFA / mois",
       features: [
         { name: "Assistance gestion financière", included: false },
@@ -55,7 +55,7 @@ export const PricingSection = () => {
       name: "WARABA",
       price: "75 000",
       period: "/mois",
-      description: "Solution complète",
+      description: "À partir de",
       priceNote: "À partir de 75 000 FCFA / mois",
       features: [
         { name: "Assistance gestion financière", included: true },
