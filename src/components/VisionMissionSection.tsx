@@ -1,14 +1,6 @@
-import { Target, Heart, Shield, Scale, Eye, Handshake, CheckCircle } from "lucide-react";
+import { Target, Heart, Star } from "lucide-react";
 
 export const VisionMissionSection = () => {
-  const values = [
-    { name: "Confidentialité", icon: Shield },
-    { name: "Intégrité", icon: CheckCircle },
-    { name: "Transparence", icon: Eye },
-    { name: "Équité", icon: Scale },
-    { name: "Responsabilité", icon: Handshake }
-  ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-access-blue/5 via-white to-access-orange/5 relative overflow-hidden">
       {/* Background decorative elements */}
@@ -21,14 +13,14 @@ export const VisionMissionSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-access-blue mb-6">
-            Notre Vision & Mission
+            Notre Vision, Mission & Valeurs
           </h2>
           <p className="text-xl text-gray-600 font-open-sans max-w-3xl mx-auto">
             Guidés par nos valeurs, nous œuvrons pour l'épanouissement des entrepreneurs
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-16">
+        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {/* Vision */}
           <div className="group">
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-access-blue/20 h-full">
@@ -80,30 +72,35 @@ export const VisionMissionSection = () => {
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Nos Valeurs */}
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-10">
-            <h3 className="text-3xl font-montserrat font-bold text-access-blue mb-4">
-              Nos Valeurs
-            </h3>
-          </div>
-          
-          <div className="flex flex-wrap justify-center gap-4">
-            {values.map((value, index) => (
-              <div 
-                key={index}
-                className="bg-white rounded-xl px-6 py-4 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-access-blue/20 flex items-center gap-3"
-              >
-                <div className="bg-access-blue/10 p-2 rounded-lg">
-                  <value.icon className="w-5 h-5 text-access-blue" />
+          {/* Nos Valeurs */}
+          <div className="group">
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-access-green/20 h-full">
+              <div className="flex items-center mb-6">
+                <div className="bg-gradient-to-r from-access-green to-green-600 p-4 rounded-full mr-4 group-hover:scale-110 transition-transform duration-300">
+                  <Star className="w-8 h-8 text-white" />
                 </div>
-                <span className="font-montserrat font-semibold text-gray-800">
-                  {value.name}
-                </span>
+                <h3 className="text-3xl font-montserrat font-bold text-access-green">
+                  Nos Valeurs
+                </h3>
               </div>
-            ))}
+              
+              <p className="text-gray-700 leading-relaxed text-lg font-open-sans">
+                Nos actions sont guidées par des valeurs fondamentales qui définissent notre identité : 
+                la <span className="font-semibold text-access-green">Confidentialité</span>, 
+                l'<span className="font-semibold text-access-green">Intégrité</span>, 
+                la <span className="font-semibold text-access-green">Transparence</span>, 
+                l'<span className="font-semibold text-access-green">Équité</span> et 
+                la <span className="font-semibold text-access-green">Responsabilité</span>.
+              </p>
+              
+              <div className="mt-6 p-4 bg-access-green/5 rounded-lg border-l-4 border-access-green">
+                <p className="text-gray-700 font-open-sans">
+                  Ces valeurs constituent le socle de notre <span className="font-semibold">engagement envers chaque entrepreneur</span> que nous accompagnons, 
+                  garantissant une relation de confiance durable.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
