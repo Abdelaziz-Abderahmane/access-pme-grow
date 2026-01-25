@@ -64,7 +64,7 @@ export const SolutionsSection = () => {
             >
               <CardContent className="p-0">
                 {/* Icon Header with unified blue gradient background */}
-                <div className="bg-gradient-to-r from-blue-600 via-access-blue to-blue-500 p-4 text-center">
+                <div className="p-4 text-center" style={{ background: 'linear-gradient(to right, #5B8BD9, #436FB5, #2E5A9E)' }}>
                   <solution.icon className="w-10 h-10 text-white mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
                   <h3 className="text-lg font-montserrat font-bold text-white">
                     {solution.title}
