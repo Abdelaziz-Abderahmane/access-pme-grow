@@ -45,36 +45,6 @@ export const AboutSection = () => {
             </div>
           </div>
 
-          {/* Section Jokkolabs avec design ajusté */}
-          <div className="text-center animate-fade-in">
-            <div className="relative bg-gradient-to-r from-access-blue/5 via-access-green/5 to-access-orange/5 rounded-2xl p-4 overflow-hidden">
-              <div className="relative z-10 max-w-4xl mx-auto">
-                <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
-                  <div className="text-center md:text-left">
-                    <h4 className="text-lg font-montserrat font-bold text-access-blue mb-2">
-                      Une initiative de
-                    </h4>
-                    <p className="text-gray-600 font-open-sans text-sm">
-                      L'écosystème de référence pour l'innovation<br />
-                      sociale et entrepreneuriale en Afrique
-                    </p>
-                  </div>
-                  
-                  <div className="relative">
-                    <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                      <a href="http://www.jokkolabs.net/" target="_blank" rel="noopener noreferrer">
-                        <img 
-                          src="/lovable-uploads/6557697e-085f-4deb-99ce-6ad4d77fb066.png" 
-                          alt="Jokkolabs - Social Change Hub" 
-                          className="h-24 w-auto hover:scale-110 transition-transform duration-300"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
